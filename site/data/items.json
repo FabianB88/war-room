@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "2026-11-16-110711-9fcc",
+    "afdeling": "centraal",
+    "datum": "2026-11-16T11:07:11+00:00",
+    "verwerkt_op": "2026-11-16T11:07:11+00:00",
+    "ingestuurd_door": "",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Welkom bij de War Room - zo deel je documenten.md",
+        "pad": "bestanden/centraal/2026-11-16-110711-9fcc/Welkom bij de War Room - zo deel je documenten.md",
+        "grootte": 802
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Welkom bij de War Room - zo deel je documenten",
+    "samenvatting": "",
+    "kernpunten": [],
+    "type": "overig",
+    "tags": [],
+    "relevantie": "",
+    "ook_relevant_voor": [],
+    "brontype": "",
+    "betrouwbaarheid": "",
+    "betrouwbaarheid_toelichting": "",
+    "onzekerheden": "",
+    "ai": false,
+    "ai_fout": "geen API-sleutel",
+    "md_pad": "afdelingen/centraal/2026-11-16-110711-9fcc-welkom-bij-de-war-room-zo-deel-je-documenten.md",
+    "issue": 1
+  }
+]
