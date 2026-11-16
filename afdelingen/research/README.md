@@ -20,6 +20,7 @@ _11 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Bijlage brandbrief: onderbouwing van AI-signalen in hbo](../centraal/2026-11-16-125743-b69b-bijlage-brandbrief-onderbouwing-van-ai-signalen-in-hbo.md)
 - 2026-11-16 - [Docentacademie: e-learning AI-basiscompetenties voor docenten](../creator-development/2026-11-16-124446-61e8-docentacademie-e-learning-ai-basiscompetenties-voor-docenten.md)
 - 2026-11-16 - [AI en hbo-leren eind 2026: valkuilen en herontwerp](../creator-development/2026-11-16-123652-2099-ai-en-hbo-leren-eind-2026-valkuilen-en-herontwerp.md)
 - 2026-11-16 - [Softskills en life skills per onderwijsrichting: literatuuroverzicht](../centraal/2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md)

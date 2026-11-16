@@ -2,10 +2,11 @@
 
 Bepaalt de richting, brengt alles samen en maakt de inhoud.
 
-_4 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Bijlage brandbrief: onderbouwing van AI-signalen in hbo](2026-11-16-125743-b69b-bijlage-brandbrief-onderbouwing-van-ai-signalen-in-hbo.md) | Bron / artikel | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, docentcompetenties, hbo, toetsing | Joost |
 | 2026-11-16 | [Softskills en life skills per onderwijsrichting: literatuuroverzicht](2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md) | Onderzoek | arbeidsmarkt, bewijskwaliteit, hbo, professionalisering, softskills | Jibbe |
 | 2026-11-16 | [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md) | Besluit | ai-in-hoger-onderwijs, cognitive-offloading, docentcompetenties, hbo, softskills, toetsing | Fien |
 | 2026-11-16 | [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md) | Overig | ai-in-hoger-onderwijs, cognitive-offloading, docentcompetenties, hbo, softskills, toetsing | Fien |
