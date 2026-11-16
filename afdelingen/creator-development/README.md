@@ -19,6 +19,7 @@ _10 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Haalbaarheid landelijk AI-systeem voor studentbegeleiding hbo](../research/2026-11-16-125650-cc0a-haalbaarheid-landelijk-ai-systeem-voor-studentbegeleiding-hb.md)
 - 2026-11-16 - [Valide toetsen van individuele kennis in opdrachtgeversprojecten zonder extra stappen](../research/2026-11-16-123215-b4b4-valide-toetsen-van-individuele-kennis-in-opdrachtgeversproje.md)
 - 2026-11-16 - [Softskills en life skills per onderwijsrichting: literatuuroverzicht](../centraal/2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md)
 - 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)

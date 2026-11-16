@@ -2,10 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_10 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_11 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Haalbaarheid landelijk AI-systeem voor studentbegeleiding hbo](2026-11-16-125650-cc0a-haalbaarheid-landelijk-ai-systeem-voor-studentbegeleiding-hb.md) | Onderzoek | ai-in-hoger-onderwijs, haalbaarheid, hbo, studiebegeleiding | Tein |
 | 2026-11-16 | [Valide toetsen van individuele kennis in opdrachtgeversprojecten zonder extra stappen](2026-11-16-123215-b4b4-valide-toetsen-van-individuele-kennis-in-opdrachtgeversproje.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, softskills, toetsing | Jens Varwijk |
 | 2026-11-16 | [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md) | Onderzoek | ai-in-hoger-onderwijs, arbeidsmarkt, bewijskwaliteit, hbo, softskills | Tein |
 | 2026-11-16 | [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Jens Varwijk |
