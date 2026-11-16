@@ -14,6 +14,7 @@ _5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Soft skills: prioriteiten voor Nederlands onderwijs per sector](../research/2026-11-16-121135-8e78-soft-skills-prioriteiten-voor-nederlands-onderwijs-per-secto.md)
 - 2026-11-16 - [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](../research/2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md)
 - 2026-11-16 - [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](../research/2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md)
 - 2026-11-16 - [Minimale eisen voor een hbo-bachelordiploma in Nederland](../research/2026-11-16-114454-8b55-minimale-eisen-voor-een-hbo-bachelordiploma-in-nederland.md)
