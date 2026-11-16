@@ -49,6 +49,8 @@ SITE = ROOT / "site"
 DATA = SITE / "data"
 BESTANDEN = SITE / "bestanden"
 AFDELINGEN = ROOT / "afdelingen"
+ARCHIEF = ROOT / "archief"                 # gearchiveerde documenten (niet meer op de site)
+ARCHIEF_VERZOEKEN = "_archiveer"           # inbox/_archiveer/<id>.json = verzoek om te archiveren
 
 MODEL = "claude-opus-5-5"
 MAX_TEKENS_PER_BRON = 300_000          # ~75k tokens tekst per bestand
@@ -429,6 +431,8 @@ def verzamel_inbox(cfg: dict) -> list[tuple[str, dict, list[Path], list[Path]]]:
             bestanden = sorted(p for p in map_.rglob("*") if p.is_file() and p.name != "meta.json" and p.name != ".gitkeep")
             id_ = map_.name if re.match(r"^\d{4}-\d{2}-\d{2}-\d{6}-[0-9a-f]{4}$", map_.name) else nieuw_id()
             taken.append((id_, meta, bestanden, [map_]))
+        elif map_.name == ARCHIEF_VERZOEKEN:
+            continue  # wordt door archiveer() afgehandeld
         elif map_.name in afd_ids:
             # losse bestanden die via GitHub zelf in inbox/<afdeling>/ zijn gezet
             for f in sorted(p for p in map_.iterdir() if p.is_file() and p.name != ".gitkeep"):
@@ -701,6 +705,48 @@ def herstel(cfg: dict, items: list[dict], client) -> int:
     return n
 
 
+def archiveer(items: list[dict]) -> int:
+    """Verwerkt verwijderverzoeken: het document gaat naar archief/ (niets wordt echt weggegooid)."""
+    map_ = INBOX / ARCHIEF_VERZOEKEN
+    if not map_.exists():
+        return 0
+    archief = laad_json(ARCHIEF / "archief.json", [])
+    n = 0
+    for f in sorted(map_.glob("*.json")):
+        verzoek = laad_json(f, {})
+        id_ = verzoek.get("id") or f.stem
+        item = next((i for i in items if i["id"] == id_), None)
+        if item:
+            items.remove(item)
+            bron = BESTANDEN / item["afdeling"] / id_
+            doel = ARCHIEF / "bestanden" / item["afdeling"] / id_
+            if bron.exists():
+                doel.parent.mkdir(parents=True, exist_ok=True)
+                shutil.move(str(bron), str(doel))
+            for b in item.get("bestanden", []):
+                b["pad"] = (doel / b["naam"]).relative_to(ROOT).as_posix()
+            md = ROOT / item["md_pad"] if item.get("md_pad") else None
+            if md and md.exists():
+                (ARCHIEF / "samenvattingen").mkdir(parents=True, exist_ok=True)
+                nieuw_md = ARCHIEF / "samenvattingen" / md.name
+                shutil.move(str(md), str(nieuw_md))
+                item["md_pad"] = nieuw_md.relative_to(ROOT).as_posix()
+            item["gearchiveerd_door"] = verzoek.get("door", "")
+            item["gearchiveerd_op"] = nu_iso()
+            archief.append(item)
+            if item.get("issue"):
+                gh_api("POST", f"/issues/{item['issue']}/labels", {"labels": ["gearchiveerd"]})
+                gh_api("PATCH", f"/issues/{item['issue']}", {"state": "closed"})
+            log(f"Gearchiveerd: {id_} ({item['titel']}) door {item['gearchiveerd_door'] or 'onbekend'}")
+            n += 1
+        else:
+            log(f"Archiveren overgeslagen: {id_} niet gevonden")
+        f.unlink()
+    if n:
+        schrijf_json(ARCHIEF / "archief.json", archief)
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--herstel", action="store_true", help="items zonder AI-samenvatting alsnog samenvatten")
@@ -715,12 +761,13 @@ def main() -> int:
     client = None if args.zonder_ai else maak_client()
 
     nieuw = verwerk(cfg, items, client)
+    gearchiveerd = archiveer(items)
     hersteld = herstel(cfg, items, client) if args.herstel else 0
 
     items.sort(key=lambda i: i["datum"], reverse=True)
     schrijf_json(DATA / "items.json", items)
     schrijf_overzichten(items, cfg)
-    log(f"Klaar: {nieuw} nieuw, {hersteld} hersteld, {len(items)} totaal.")
+    log(f"Klaar: {nieuw} nieuw, {gearchiveerd} gearchiveerd, {hersteld} hersteld, {len(items)} totaal.")
     return 0
 
 

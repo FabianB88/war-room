@@ -75,15 +75,45 @@
         ${i.brontype || i.betrouwbaarheid ? `<p class="muted klein">Bron: ${esc(i.brontype || "–")}${i.betrouwbaarheid ? ` · betrouwbaarheid ${esc(i.betrouwbaarheid)}` : ""}${i.onzekerheden ? ` · ⚠ ${esc(i.onzekerheden)}` : ""}</p>` : ""}
         ${i.notitie ? `<p class="muted"><em>“${esc(i.notitie)}”</em></p>` : ""}
         ${/^https?:\/\//i.test(i.link || "") ? `<p><a href="${esc(i.link)}" target="_blank" rel="noopener noreferrer">${esc(i.link)}</a></p>` : ""}
+        <button class="verwijder" data-archiveer="${esc(i.id)}">🗑 Verwijderen</button>
       </div>
       ${i.bestanden?.length ? `<div class="doc-dl">${i.bestanden.map((b) =>
         `<a href="${esc(encodeURI(b.pad))}" download="${esc(b.naam)}" class="dl"><span class="ext">${esc(ext(b.naam))}</span>${esc(b.naam)} <span class="muted">${grootte(b.grootte)} ↓</span></a>`).join("")}</div>` : ""}
     </article>`;
   }
 
+  // ------------------------------------------------------------ verwijderen (= archiveren)
+  const verborgen = () => { try { return JSON.parse(opslag.get("warroom-verborgen") || "{}"); } catch { return {}; } };
+  function verberg(id) {
+    const v = verborgen();
+    v[id] = Date.now();
+    for (const k of Object.keys(v)) if (Date.now() - v[k] > 30 * 60000) delete v[k];   // na 30 min vergeten
+    opslag.set("warroom-verborgen", JSON.stringify(v));
+  }
+
+  async function archiveer(id) {
+    const item = items.find((i) => i.id === id);
+    if (!item) return;
+    if (!token()) { $("#geen-toegang").hidden = false; return status("Je hebt eerst de teamlink nodig.", "fout"); }
+    if (!confirm(`Weet je zeker dat je "${item.titel}" wilt verwijderen?\n\nHet document verdwijnt uit de lijst, maar wordt bewaard in het archief en kan altijd worden teruggezet.`)) return;
+    const verzoek = { id, door: $("#naam").value.trim() || opslag.get("warroom-naam") || "", op: new Date().toISOString() };
+    const inhoud = btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(verzoek, null, 2))));
+    try {
+      await gh(`/contents/inbox/_archiveer/${encodeURIComponent(id)}.json`, { method: "PUT",
+        body: JSON.stringify({ message: `Archiveren: ${item.titel} (${verzoek.door || "onbekend"})`, content: inhoud, branch: repo().branch }) });
+      verberg(id);
+      status(`“${item.titel}” is verwijderd en gearchiveerd.`, "ok");
+      render();
+    } catch (e) {
+      status("Verwijderen mislukt: " + (e.status === 422 ? "er loopt al een verwijderverzoek voor dit document" : e.message) + ".", "fout");
+    }
+  }
+
   function render() {
     const z = filter.zoek.toLowerCase();
+    const weg = verborgen();
     const lijst = items
+      .filter((i) => !weg[i.id])
       .filter((i) => (!filter.afd || i.afdeling === filter.afd) &&
         (!z || [i.titel, i.samenvatting, i.notitie, i.ingestuurd_door, ...(i.tags || []), ...(i.kernpunten || []), ...(i.bestanden || []).map((b) => b.naam)].join(" ").toLowerCase().includes(z)))
       .sort((a, b) => b.datum.localeCompare(a.datum));
@@ -94,6 +124,7 @@
     $$("#lijst .doc-kop").forEach((k) => k.addEventListener("click", () => {
       const d = k.closest(".doc"); d.classList.toggle("open"); k.setAttribute("aria-expanded", d.classList.contains("open"));
     }));
+    $$("#lijst [data-archiveer]").forEach((b) => b.addEventListener("click", () => archiveer(b.dataset.archiveer)));
   }
 
   // ------------------------------------------------------------ uploaden
