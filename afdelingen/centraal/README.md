@@ -13,11 +13,9 @@ _4 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
-- 2026-11-16 - [Prioritaire soft skills voor Nederlands onderwijs en arbeidsmarkt](../research/2026-11-16-122843-c6f1-prioritaire-soft-skills-voor-nederlands-onderwijs-en-arbeids.md)
 - 2026-11-16 - [AI-beoordeling van opnames: haalbaarheid, bias en regelgeving](../creator-development/2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md)
 - 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)
 - 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)
-- 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)
 - 2026-11-16 - [E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)](../creator-development/2026-11-16-122711-186f-e-learning-onderwijs-opnieuw-ontwerpen-met-ai-voor-hbo-docen.md)
 - 2026-11-16 - [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](../research/2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md)
 - 2026-11-16 - [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](../research/2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md)
