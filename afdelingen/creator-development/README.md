@@ -2,10 +2,13 @@
 
 Maakt tools, prototypes en content.
 
-_5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, privacy, toetsing | Fabian |
+| 2026-11-16 | [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, privacy, toetsing | Fabian |
+| 2026-11-16 | [E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)](2026-11-16-122711-186f-e-learning-onderwijs-opnieuw-ontwerpen-met-ai-voor-hbo-docen.md) | Tool / prototype | ai-in-hoger-onderwijs, docentcompetenties, hbo, professionalisering, toetsing | Fabian |
 | 2026-11-16 | [Minimale AI-competenties en basisprogramma voor hbo-docenten](2026-11-16-112501-7898-minimale-ai-competenties-en-basisprogramma-voor-hbo-docenten.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, docentcompetenties, hbo, professionalisering, toetsing | Luna |
 | 2026-11-16 | [Advies: online docentprofessionalisering op schaal met cohorten en menselijke feedback](2026-11-16-112330-db20-advies-online-docentprofessionalisering-op-schaal-met-cohort.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, docentcompetenties, privacy, professionalisering, toetsing | Fabian |
 | 2026-11-16 | [Minimale AI-competenties voor hbo-docenten: onderbouwing en basisprogramma](2026-11-16-112209-31f8-minimale-ai-competenties-voor-hbo-docenten-onderbouwing-en-b.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, docentcompetenties, hbo, professionalisering, toetsing | Luna |
@@ -14,6 +17,8 @@ _5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)
+- 2026-11-16 - [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](../centraal/2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md)
 - 2026-11-16 - [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](../centraal/2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md)
 - 2026-11-16 - [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](../research/2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md)
 - 2026-11-16 - [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](../research/2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md)

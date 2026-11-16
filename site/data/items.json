@@ -1,5 +1,240 @@
 [
   {
+    "id": "2026-11-16-122724-12b1",
+    "afdeling": "research",
+    "datum": "2026-11-16T12:27:24+00:00",
+    "verwerkt_op": "2026-11-16T12:29:13+00:00",
+    "ingestuurd_door": "Tein",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Welke soft skills moeten Nederlandse onderwijsinstellingen prioriteren voor de arbeidsmarkt van de toekomst.docx",
+        "pad": "bestanden/research/2026-11-16-122724-12b1/Welke soft skills moeten Nederlandse onderwijsinstellingen prioriteren voor de arbeidsmarkt van de toekomst.docx",
+        "grootte": 29590
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Prioritering van soft skills voor Nederlandse onderwijsinstellingen",
+    "samenvatting": "Dit is een Deep Research-synthese over welke soft skills Nederlandse onderwijsinstellingen moeten prioriteren voor de huidige en toekomstige arbeidsmarkt. De conclusie is dat zeven universele kernvaardigheden de basis vormen, aangevuld met sectorspecifieke vaardigheden voor tien beroepssectoren. Het rapport adviseert deze vaardigheden te integreren in bestaande lessen, projecten en stages, met herhaling en feedback. AI wordt gepositioneerd als oefenmiddel, niet als vervanger van eigen vaardigheidsontwikkeling. De rangordes zijn eigen analytische scores van de onderzoekers, geen gemeten arbeidsmarktdata.",
+    "kernpunten": [
+      "Zeven kernvaardigheden: aanpassingsvermogen en veerkracht, kritisch en analytisch denken, probleemoplossen, communicatie, samenwerken, zelfregulatie en leren leren, ethisch en verantwoordelijk handelen.",
+      "WEF (2025): ongeveer 70% van de werkgevers ziet analytisch denken als kernvaardigheid; ongeveer 39% van de kernvaardigheden verandert richting 2030.",
+      "HBO-Monitor 2024: zelfstandig werken is in alle zeven hbo-sectoren een belangrijke vaardigheid; duidelijk communiceren staat in vijf sectoren in de top drie, en afgestudeerden zeggen dat het gevraagde niveau hoger ligt dan hun eigen niveau.",
+      "Effectieve aanpak: expliciete uitleg, oefenen in realistische situaties, feedback, reflectie en herhaalde toepassing in steeds complexere situaties. Er is geen universeel beste lesvorm.",
+      "Bewijs voor interventies is wisselend: in de review van Orih et al. (2024) voldeden slechts 3 van 38 studies aan de strengste kwaliteitscriteria. Simulatieonderwijs in de zorg heeft relatief sterk bewijs (meta-analyse van 8 RCT's, 819 studenten; Alanazi et al., 2022).",
+      "AI-toepassingen die het rapport noemt: AI als fictieve klant voor gesprekken, als bron van tegenargumenten voor kritisch denken, en als hulp bij plannen. De langetermijneffecten van generatieve AI op soft skills zijn onzeker (ILO, 2026).",
+      "Het rapport adviseert drie prioriteitsniveaus: essentieel (de zeven kernvaardigheden), sectorgericht en aanvullend."
+    ],
+    "type": "onderzoek",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "arbeidsmarkt",
+      "bewijskwaliteit",
+      "hbo",
+      "softskills"
+    ],
+    "relevantie": "Het geeft een onderbouwd kader voor welke vaardigheden het onderwijs moet versterken, nu AI taken overneemt. Het team kan dit gebruiken om keuzes over inhoud en prototypes te onderbouwen, bijvoorbeeld AI-gestuurde oefensimulaties voor communicatie en kritisch denken.",
+    "ook_relevant_voor": [
+      "centraal",
+      "creator-development"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "De synthese leunt op gerenommeerde bronnen (WEF, ILO, ROA/HBO-Monitor, reviews), maar de rangordes en sectorlijsten zijn eigen scores en de auteur en afdeling zijn niet vermeld.",
+    "onzekerheden": "De top 12 en de sectorranglijsten zijn eigen analytische scores met zelfgekozen gewichten, geen gemeten data (alleen een gevoeligheidsanalyse waarin de volgorde wisselt). Het is geen systematische review (geen PRISMA). Werkgeversenquêtes tonen belang, geen causaliteit. Bewijs uit de zorgopleidingen is niet zonder meer te generaliseren naar andere hbo-opleidingen. De originele bronnen zijn niet door de informatiemanager gecontroleerd; de literatuurlijst is overgenomen uit het oorspronkelijke rapport. Auteur en afdeling zijn niet opgegeven in het document, en de grafiek en de bron-tabellen zijn alleen als tekst beschikbaar.",
+    "ai": true,
+    "md_pad": "afdelingen/research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md",
+    "issue": 22
+  },
+  {
+    "id": "2026-11-16-122716-b466",
+    "afdeling": "creator-development",
+    "datum": "2026-11-16T12:27:16+00:00",
+    "verwerkt_op": "2026-11-16T12:29:00+00:00",
+    "ingestuurd_door": "Fabian",
+    "notitie": "Kort antwoord: een systeem dat opnames beoordeelt kun je met de huidige AI technisch best bouwen. Een systeem zonder bias kun je niet bouwen. Dat ligt niet aan de stand van de techniek: “geen bias” is als doel niet goed te definiëren. Wat wel kan, is een systeem dat aantoonbaar eerlijker en consistenter is dan de huidige menselijke beoordeling. Ook dat is een groot project, en het moeilijkste deel is niet de AI.\n\nWat nu al goed kan\nSpraak naar tekst werkt goed, ook in het Nederlands.\nBeoordelen aan de hand van een rubric: taalmodellen kunnen een transcript langs criteria leggen en hun score onderbouwen. Op inhoud (klopt de redenering, worden de goede begrippen gebruikt, is de opbouw logisch) komen ze vaak dicht bij twee menselijke beoordelaars onderling.\nSmalle, goed gedefinieerde vaardigheden, zoals spreekvaardigheid op ERK/CEFR-niveau. Daarvoor bestaan al commerciële systemen, bijvoorbeeld bij TOEFL en Duolingo English Test.\n\nEen werkend prototype voor één vak of vaardigheid bouw je in weken tot maanden.\n\nWaar het moeilijk wordt\n\n1. Waar de bias vandaan komt\n\nAccent en dialect: spraakherkenning maakt aantoonbaar meer fouten bij niet-moedertaalsprekers, regionale accenten en mensen die stotteren. Dan wordt al een slechter transcript beoordeeld voordat er iets gescoord is.\nOpnamekwaliteit: een slechte microfoon of een rumoerig huis hangt samen met sociaaleconomische achtergrond.\nVideo: uiterlijk, huidskleur en kleding kunnen meewegen, ook als niemand dat zo bedoeld heeft.\nStijl versus inhoud: is iemand die rustig en direct praat beter, of past die alleen beter bij de norm in de trainingsdata en de rubric?\nDe rubric zelf: als die culturele normen bevat, voert de AI die perfect consistent uit. Consistent is dan niet hetzelfde als eerlijk.\n\n2. “Eerlijk” kent meerdere definities die elkaar uitsluiten\nGelijke gemiddelde scores per groep, gelijke foutmarges per groep of gelijke betekenis van een score per groep: die kun je wiskundig niet allemaal tegelijk halen. Je moet dus kiezen, en dat is een politieke en onderwijskundige keuze, geen technische.\n\n3. Om bias te meten heb je gevoelige gegevens nodig\nJe kunt alleen controleren of het systeem studenten met een migratieachtergrond benadeelt als je die achtergrond kent. Onder de AVG zijn dat bijzondere persoonsgegevens. De AI Act staat het verwerken daarvan voor bias-detectie onder strikte voorwaarden toe, maar het blijft juridisch en maatschappelijk gevoelig.\n\n4. Wetgeving\n\nOnder de EU AI Act valt AI die leerresultaten beoordeelt in de categorie hoog risico. Dat brengt verplichtingen mee: risicomanagement, eisen aan datakwaliteit, menselijk toezicht, documentatie, een conformiteitsbeoordeling en registratie. Deze verplichtingen gaan in 2026–2027 in; er is uitstel voorgesteld, dus check de actuele datum.\nEmotieherkenning in het onderwijs is sinds februari 2025 verboden. Het systeem mag dus niet afleiden of een student “zeker” of “zenuwachtig” overkomt.\nVolgens AVG artikel 22 mag een student niet zonder betekenisvolle menselijke tussenkomst alleen door een algoritme beoordeeld worden.\n\n5. De Nederlandse context\nNa het DUO-algoritme dat studenten met een migratieachtergrond vaker als fraudeur aanmerkte, en na de toeslagenaffaire, is het draagvlak voor een landelijk beoordelingsalgoritme klein. Bij het eerste incident ligt het hele project stil.\n\nRealistische inschatting\nAmbitie\tHaalbaarheid\nPrototype voor één vaardigheid\tMaanden, goed te doen\nBetrouwbaar voor één vaardigheid, gevalideerd en op bias getoetst\t1–2 jaar, met een grote, diverse dataset die door minstens twee mensen beoordeeld is\nLandelijk, voor meerdere vakken, juridisch in orde en breed geaccepteerd\tVele jaren en tientallen miljoenen, plus een governance-structuur\n\nHet meeste werk zit in het definiëren van wat “niveau” is, in data verzamelen en labelen, in validatie, in bezwaarprocedures en in draagvlak. Het model zelf is het makkelijke deel.\n\nWat ik zou doen\nAI als tweede beoordelaar, niet als rechter. Laat het systeem afwijkingen signaleren: “deze docent scoort structureel lager bij groep X” of “deze score wijkt sterk af, kijk nog eens.” Daar win je het meest aan eerlijkheid, met het minste risico.\nAlleen audio, of zelfs alleen het transcript. Dan valt uiterlijk als bron van bias helemaal weg.\nMeet per groep hoeveel fouten de spraakherkenning maakt voordat je ook maar iets beoordeelt.\nBegin formatief en met lage inzet, bijvoorbeeld als oefenfeedback voor studenten, en niet met diploma’s of selectie.\nVergelijk met de werkelijkheid, niet met perfectie. Menselijke beoordelaars hebben ook bias, alleen is die onzichtbaar en niet te meten. Een AI-systeem kun je wel auditen. Dat is het sterkste argument vóór zo’n systeem.\n\nAls je wilt, kan ik dit uitwerken voor een concrete context, bijvoorbeeld mondelinge toetsen in een minor of presentaties bij een opleiding. Dan wordt het een stuk concreter wat haalbaar is.",
+    "link": "",
+    "bestanden": [],
+    "opmerkingen": [],
+    "titel": "Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames",
+    "samenvatting": "Een expertinschatting van Fabian over de vraag of AI mondelinge opnames (audio/video) van studenten kan beoordelen. De conclusie: technisch is een beoordelingssysteem haalbaar, een systeem zonder bias niet, omdat 'geen bias' niet goed te definiëren is. Wel kan een systeem aantoonbaar eerlijker en consistenter zijn dan menselijke beoordeling. De notitie beschrijft bronnen van bias, juridische kaders (AI Act, AVG), de Nederlandse context en een realistische tijdlijn, en eindigt met aanbevelingen zoals AI als tweede beoordelaar en starten met formatieve toepassingen.",
+    "kernpunten": [
+      "Spraak-naar-tekst werkt goed in het Nederlands en een rubric-gebaseerde beoordeling door taalmodellen komt op inhoud vaak dicht bij de overeenstemming tussen twee menselijke beoordelaars; een prototype voor één vak kost weken tot maanden.",
+      "Biasbronnen: spraakherkenning maakt meer fouten bij accenten, dialecten, niet-moedertaalsprekers en stotteren; opnamekwaliteit hangt samen met sociaaleconomische achtergrond; bij video kunnen uiterlijk en kleding meewegen; de rubric zelf kan culturele normen bevatten.",
+      "Er bestaan meerdere, onderling onverenigbare definities van 'eerlijk' (gelijke gemiddelden, gelijke foutmarges, gelijke betekenis van een score); kiezen is een politieke en onderwijskundige keuze.",
+      "Bias meten vereist gevoelige gegevens (bv. migratieachtergrond), wat onder de AVG bijzondere persoonsgegevens zijn; de AI Act staat dit onder strikte voorwaarden toe voor bias-detectie.",
+      "Wetgeving: AI die leerresultaten beoordeelt is hoog risico onder de AI Act (verplichtingen gaan in 2026–2027, uitstel voorgesteld); emotieherkenning in het onderwijs is sinds februari 2025 verboden; AVG art. 22 vereist betekenisvolle menselijke tussenkomst.",
+      "Tijdlijn: prototype voor één vaardigheid in maanden; gevalideerd en op bias getoetst 1–2 jaar met grote diverse dataset met minstens twee menselijke beoordelaars; landelijk en juridisch in orde vele jaren en tientallen miljoenen.",
+      "Aanbevelingen: AI als tweede beoordelaar die afwijkingen signaleert, alleen audio of transcript gebruiken, spraakherkenningsfouten per groep meten, formatief en laag-inzet beginnen, en vergelijken met menselijke beoordeling in plaats van met perfectie."
+    ],
+    "type": "idee",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "bewijskwaliteit",
+      "hbo",
+      "privacy",
+      "toetsing"
+    ],
+    "relevantie": "Geeft het team een nuchter kader om te bepalen of en hoe AI-beoordeling van mondelinge toetsen in de challenge kan worden voorgesteld: als tweede beoordelaar en formatief, niet als rechter. De juridische en bias-punten zijn direct bruikbaar voor risicoparagrafen en voor het scherp afbakenen van een concreet voorstel.",
+    "ook_relevant_voor": [
+      "research",
+      "centraal"
+    ],
+    "brontype": "expertstandpunt",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Een goed gestructureerde persoonlijke inschatting zonder bronverwijzingen of cijfers, van een teamlid zonder aantoonbaar belang.",
+    "onzekerheden": "Geen bronnen genoemd; claims over modelprestaties (dicht bij menselijke beoordelaars), commerciële systemen (TOEFL, Duolingo) en de tijdlijn/kosten zijn niet onderbouwd en moeten geverifieerd worden. De ingangsdata van de AI Act-verplichtingen zijn onzeker door voorgesteld uitstel; de actuele stand moet gecheckt worden. De claim over het DUO-algoritme is niet met bron onderbouwd. De uitwerking voor een concrete context (bv. minor of presentaties) is aangeboden maar nog niet gedaan.",
+    "ai": true,
+    "md_pad": "afdelingen/creator-development/2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md",
+    "issue": 21
+  },
+  {
+    "id": "2026-11-16-122712-b34d",
+    "afdeling": "creator-development",
+    "datum": "2026-11-16T12:27:12+00:00",
+    "verwerkt_op": "2026-11-16T12:28:47+00:00",
+    "ingestuurd_door": "Fabian",
+    "notitie": "Kort antwoord: een systeem dat opnames beoordeelt kun je met de huidige AI technisch best bouwen. Een systeem zonder bias kun je niet bouwen. Dat ligt niet aan de stand van de techniek: “geen bias” is als doel niet goed te definiëren. Wat wel kan, is een systeem dat aantoonbaar eerlijker en consistenter is dan de huidige menselijke beoordeling. Ook dat is een groot project, en het moeilijkste deel is niet de AI.\n\nWat nu al goed kan\nSpraak naar tekst werkt goed, ook in het Nederlands.\nBeoordelen aan de hand van een rubric: taalmodellen kunnen een transcript langs criteria leggen en hun score onderbouwen. Op inhoud (klopt de redenering, worden de goede begrippen gebruikt, is de opbouw logisch) komen ze vaak dicht bij twee menselijke beoordelaars onderling.\nSmalle, goed gedefinieerde vaardigheden, zoals spreekvaardigheid op ERK/CEFR-niveau. Daarvoor bestaan al commerciële systemen, bijvoorbeeld bij TOEFL en Duolingo English Test.\n\nEen werkend prototype voor één vak of vaardigheid bouw je in weken tot maanden.\n\nWaar het moeilijk wordt\n\n1. Waar de bias vandaan komt\n\nAccent en dialect: spraakherkenning maakt aantoonbaar meer fouten bij niet-moedertaalsprekers, regionale accenten en mensen die stotteren. Dan wordt al een slechter transcript beoordeeld voordat er iets gescoord is.\nOpnamekwaliteit: een slechte microfoon of een rumoerig huis hangt samen met sociaaleconomische achtergrond.\nVideo: uiterlijk, huidskleur en kleding kunnen meewegen, ook als niemand dat zo bedoeld heeft.\nStijl versus inhoud: is iemand die rustig en direct praat beter, of past die alleen beter bij de norm in de trainingsdata en de rubric?\nDe rubric zelf: als die culturele normen bevat, voert de AI die perfect consistent uit. Consistent is dan niet hetzelfde als eerlijk.\n\n2. “Eerlijk” kent meerdere definities die elkaar uitsluiten\nGelijke gemiddelde scores per groep, gelijke foutmarges per groep of gelijke betekenis van een score per groep: die kun je wiskundig niet allemaal tegelijk halen. Je moet dus kiezen, en dat is een politieke en onderwijskundige keuze, geen technische.\n\n3. Om bias te meten heb je gevoelige gegevens nodig\nJe kunt alleen controleren of het systeem studenten met een migratieachtergrond benadeelt als je die achtergrond kent. Onder de AVG zijn dat bijzondere persoonsgegevens. De AI Act staat het verwerken daarvan voor bias-detectie onder strikte voorwaarden toe, maar het blijft juridisch en maatschappelijk gevoelig.\n\n4. Wetgeving\n\nOnder de EU AI Act valt AI die leerresultaten beoordeelt in de categorie hoog risico. Dat brengt verplichtingen mee: risicomanagement, eisen aan datakwaliteit, menselijk toezicht, documentatie, een conformiteitsbeoordeling en registratie. Deze verplichtingen gaan in 2026–2027 in; er is uitstel voorgesteld, dus check de actuele datum.\nEmotieherkenning in het onderwijs is sinds februari 2025 verboden. Het systeem mag dus niet afleiden of een student “zeker” of “zenuwachtig” overkomt.\nVolgens AVG artikel 22 mag een student niet zonder betekenisvolle menselijke tussenkomst alleen door een algoritme beoordeeld worden.\n\n5. De Nederlandse context\nNa het DUO-algoritme dat studenten met een migratieachtergrond vaker als fraudeur aanmerkte, en na de toeslagenaffaire, is het draagvlak voor een landelijk beoordelingsalgoritme klein. Bij het eerste incident ligt het hele project stil.\n\nRealistische inschatting\nAmbitie\tHaalbaarheid\nPrototype voor één vaardigheid\tMaanden, goed te doen\nBetrouwbaar voor één vaardigheid, gevalideerd en op bias getoetst\t1–2 jaar, met een grote, diverse dataset die door minstens twee mensen beoordeeld is\nLandelijk, voor meerdere vakken, juridisch in orde en breed geaccepteerd\tVele jaren en tientallen miljoenen, plus een governance-structuur\n\nHet meeste werk zit in het definiëren van wat “niveau” is, in data verzamelen en labelen, in validatie, in bezwaarprocedures en in draagvlak. Het model zelf is het makkelijke deel.\n\nWat ik zou doen\nAI als tweede beoordelaar, niet als rechter. Laat het systeem afwijkingen signaleren: “deze docent scoort structureel lager bij groep X” of “deze score wijkt sterk af, kijk nog eens.” Daar win je het meest aan eerlijkheid, met het minste risico.\nAlleen audio, of zelfs alleen het transcript. Dan valt uiterlijk als bron van bias helemaal weg.\nMeet per groep hoeveel fouten de spraakherkenning maakt voordat je ook maar iets beoordeelt.\nBegin formatief en met lage inzet, bijvoorbeeld als oefenfeedback voor studenten, en niet met diploma’s of selectie.\nVergelijk met de werkelijkheid, niet met perfectie. Menselijke beoordelaars hebben ook bias, alleen is die onzichtbaar en niet te meten. Een AI-systeem kun je wel auditen. Dat is het sterkste argument vóór zo’n systeem.\n\nAls je wilt, kan ik dit uitwerken voor een concrete context, bijvoorbeeld mondelinge toetsen in een minor of presentaties bij een opleiding. Dan wordt het een stuk concreter wat haalbaar is.",
+    "link": "",
+    "bestanden": [],
+    "opmerkingen": [],
+    "titel": "Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames",
+    "samenvatting": "Fabian geeft een eigen inschatting van of een AI-systeem opnames (mondelinge toetsen, presentaties) kan beoordelen en of dat zonder bias kan. Conclusie: technisch is beoordelen goed haalbaar, maar een systeem zonder bias niet, omdat 'geen bias' niet eenduidig te definiëren is; wel kan een systeem aantoonbaar eerlijker en consistenter zijn dan menselijke beoordeling. De tekst beschrijft biasbronnen (accent, opnamekwaliteit, video, rubric), uitsluitende eerlijkheidsdefinities, dataproblemen (AVG), regelgeving (EU AI Act, AVG art. 22) en de Nederlandse context. Het advies is AI te gebruiken als tweede beoordelaar, formatief en met lage inzet, bij voorkeur op alleen audio of transcript.",
+    "kernpunten": [
+      "Technisch haalbaar: spraak-naar-tekst werkt goed (ook Nederlands), taalmodellen kunnen transcripten langs een rubric scoren en komen op inhoud vaak dicht bij twee menselijke beoordelaars; een prototype voor één vaardigheid kost weken tot maanden.",
+      "Biasbronnen: slechtere spraakherkenning bij niet-moedertaalsprekers, regionale accenten en stotteren; opnamekwaliteit (gekoppeld aan sociaaleconomische achtergrond); uiterlijk bij video; stijl versus inhoud; culturele normen in de rubric (consistent is niet gelijk aan eerlijk).",
+      "Eerlijkheidsdefinities (gelijke gemiddelden, gelijke foutmarges, gelijke betekenis van een score) zijn wiskundig niet tegelijk te halen; kiezen is een politieke en onderwijskundige keuze.",
+      "Bias meten vereist gevoelige gegevens (bijv. migratieachtergrond), bijzondere persoonsgegevens onder de AVG; de AI Act staat verwerking voor bias-detectie onder strikte voorwaarden toe.",
+      "Wetgeving: beoordeling van leerresultaten is hoog risico onder de EU AI Act (verplichtingen 2026–2027, uitstel voorgesteld); emotieherkenning in het onderwijs is sinds feb. 2025 verboden; AVG art. 22 vereist betekenisvolle menselijke tussenkomst.",
+      "Realistische inschatting: prototype voor één vaardigheid in maanden; gevalideerd en op bias getoetst 1–2 jaar met grote, diverse, dubbel beoordeelde dataset; landelijk vele jaren en tientallen miljoenen.",
+      "Advies: AI als tweede beoordelaar die afwijkingen signaleert, alleen audio/transcript, eerst ASR-fouten per groep meten, starten formatief; vergelijk met menselijke bias, die niet auditbaar is, terwijl AI wel auditbaar is."
+    ],
+    "type": "idee",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "bewijskwaliteit",
+      "hbo",
+      "privacy",
+      "toetsing"
+    ],
+    "relevantie": "Biedt een afgewogen kader voor elk idee of prototype dat mondelinge prestaties beoordeelt: begin klein, formatief en met menselijke tussenkomst, en neem wet- en biasaspecten vanaf het begin mee. Het Centraal Team kan hiermee richting bepalen of een AI-tweede-beoordelaar of oefenfeedback-tool een haalbare uitwerking van de challenge is.",
+    "ook_relevant_voor": [
+      "centraal",
+      "research"
+    ],
+    "brontype": "expertstandpunt",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Inhoudelijk consistent met bekende thema's en door een teamlid geschreven, maar zonder bronverwijzingen of cijfers en niet onafhankelijk getoetst.",
+    "onzekerheden": "Er zijn geen bronnen of onderzoeken genoemd voor claims zoals 'dicht bij twee menselijke beoordelaars', ASR-fouten per groep, TOEFL/Duolingo of de tijds- en kostenramingen (maanden, 1–2 jaar, tientallen miljoenen); deze zijn schattingen. De ingangsdata van de AI Act zijn onzeker door voorgesteld uitstel en moeten worden nagecheckt. De uitwerking voor een concrete context (minor, presentaties) is nog niet gedaan.",
+    "ai": true,
+    "md_pad": "afdelingen/creator-development/2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md",
+    "issue": 20
+  },
+  {
+    "id": "2026-11-16-122711-186f",
+    "afdeling": "creator-development",
+    "datum": "2026-11-16T12:27:11+00:00",
+    "verwerkt_op": "2026-11-16T12:28:36+00:00",
+    "ingestuurd_door": "Fabian",
+    "notitie": "Eerste test van een e-learning voor hbo-docenten: van AI-vaardig naar AI-didactisch vaardig. Gebaseerd op het rapport Minimale AI-competenties voor hbo-docenten. Online te bekijken via de link; SCORM-pakket voor Brightspace zit erbij.",
+    "link": "https://fabianb88.github.io/ai-didactisch-vaardig/",
+    "bestanden": [
+      {
+        "naam": "Onderwijs opnieuw ontwerpen met AI - opzet e-learning.md",
+        "pad": "bestanden/creator-development/2026-11-16-122711-186f/Onderwijs opnieuw ontwerpen met AI - opzet e-learning.md",
+        "grootte": 4070
+      },
+      {
+        "naam": "onderwijs-opnieuw-ontwerpen-met-ai-scorm.zip",
+        "pad": "bestanden/creator-development/2026-11-16-122711-186f/onderwijs-opnieuw-ontwerpen-met-ai-scorm.zip",
+        "grootte": 528462
+      }
+    ],
+    "opmerkingen": [
+      "onderwijs-opnieuw-ontwerpen-met-ai-scorm.zip: bestandstype kan AI niet lezen (wel downloadbaar)"
+    ],
+    "titel": "E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)",
+    "samenvatting": "Fabian (Creator & Development) heeft een conceptversie gemaakt van een e-learning voor hbo-docenten die hen van 'AI-vaardig' naar 'AI-didactisch vaardig' brengt, zodat ze onderwijs opnieuw kunnen ontwerpen. De e-learning bestaat uit een start en negen modules in drie lagen (AI-vaardig, AI-didactisch, herontwerpen) en dekt acht competonties uit het rapport 'Minimale AI-competenties voor hbo-docenten'. De docent werkt de hele cursus aan één eigen les, opdracht of toets. De structuur staat, maar de inhoud is een eerste invulling die nog door echte content vervangen moet worden. Er is een online versie, een bouwbestand voor de E-learning Bouwer en een SCORM 1.2-pakket voor Brightspace; het zip-bestand kon niet worden gelezen.",
+    "kernpunten": [
+      "Opbouw: startmodule (instapopdracht, zelfscan) plus 9 modules en een bronnenpagina, verdeeld over drie lagen: AI-vaardig (module 1-3), AI-didactisch (module 4-8) en herontwerpen (module 9).",
+      "Elke module volgt hetzelfde patroon: leerdoelen, uitleg, oefenen (meerkeuze, koppelen, sorteren, scenario), praktijkopdracht in de eigen les en koppeling aan het 'aantoonbaar minimum' van de competentie.",
+      "Al ingevuld: HAN-links (gecontroleerd op 16 november 2026; voor andere instellingen te vervangen), klikplaat van placemat 5 (E-learning) in module 6, en een conceptrubric met vier niveaus per competentie in module 9.",
+      "Gecontroleerde kaders: AI Assessment Scale (herziene versie, Perkins e.a. 2024, zonder rangorde), de zeven AI-rollen van Mollick & Mollick (2023) en de tweesporenaanpak van de University of Sydney.",
+      "Nog in te vullen: kennisclips (max. zes minuten), een foutvoorbeeld uit een eigen vakgebied, de downloadlocatie van de AI-placemats en docentinstructie, en informatie over edubadge en portfolio-inlevering.",
+      "Formaten: webpagina (GitHub Pages), bouwbestand (JSON) voor de E-learning Bouwer en SCORM 1.2-pakket voor Brightspace of een ander LMS."
+    ],
+    "type": "tool",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "docentcompetenties",
+      "hbo",
+      "professionalisering",
+      "toetsing"
+    ],
+    "relevantie": "Dit is een concreet prototype dat het onderzoeksrapport over minimale AI-competenties omzet in scholing voor docenten, en dus direct inzetbaar is als onderdeel van de challenge-oplossing. Het Centraal Team kan beoordelen of de opzet en de keuze voor de placemat-methode aansluiten bij de richting.",
+    "ook_relevant_voor": [
+      "centraal",
+      "research"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "",
+    "betrouwbaarheid_toelichting": "Het is eigen werk van het team (concept), geen externe bron; de gebruikte kaders worden in het document als gecontroleerd aangeduid.",
+    "onzekerheden": "De inhoud is een eerste invulling en nog niet definitief. De competenties en lesopzet zijn een ontwerpvoorstel dat in een pilot getoetst moet worden, en de rubric moet nog met docenten gekalibreerd worden. Het SCORM-pakket kon niet gelezen worden en is niet beoordeeld. De onlinepagina is alleen als titel beschikbaar gesteld, dus de feitelijke inhoud is niet getoetst. Cijfers en bronnen moeten bij het invullen van echte content opnieuw gecontroleerd worden.",
+    "ai": true,
+    "md_pad": "afdelingen/creator-development/2026-11-16-122711-186f-e-learning-onderwijs-opnieuw-ontwerpen-met-ai-voor-hbo-docen.md",
+    "issue": 19
+  },
+  {
+    "id": "2026-11-16-122703-19d0",
+    "afdeling": "centraal",
+    "datum": "2026-11-16T12:27:03+00:00",
+    "verwerkt_op": "2026-11-16T12:28:23+00:00",
+    "ingestuurd_door": "Fien",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Brandbrief_AI_en_herinrichting_hbo_uitgebreid.docx",
+        "pad": "bestanden/centraal/2026-11-16-122703-19d0/Brandbrief_AI_en_herinrichting_hbo_uitgebreid.docx",
+        "grootte": 38835
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo",
+    "samenvatting": "Dit is een brandbrief van studenten en docenten van de minor Circulaire Economie (HAN) aan het ministerie van OCW, gedateerd 16 november 2026. De kernboodschap: AI-onderwijs is nodig maar niet voldoende; het hbo moet breder worden heringericht (inhoud, didactiek, toetsing, praktijkervaring). Studenten moeten leren AI te gebruiken zonder hun eigen denken uit te besteden ('Human in the lead'), met een praktische toolkit om AI-uitkomsten te beoordelen. De brief eindigt met zes concrete verzoeken aan het ministerie. De signalen over misbruik, een kloof in AI-vaardigheid en kansenongelijkheid worden niet met cijfers of voorbeelden onderbouwd.",
+    "kernpunten": [
+      "Hoofdstelling: AI-onderwijs is nodig maar niet de oplossing op zichzelf; het hbo moet worden heringericht (inhoud, didactiek, toetsing, praktijkervaring).",
+      "'Human in the lead': studenten blijven verantwoordelijk, leren AI-uitkomsten controleren en bouwen zelf de vakkennis op om dat te kunnen.",
+      "Genoemde signalen: studenten weten niet altijd hoe met AI om te gaan, er is misbruik, er is een kloof tussen kenners en niet-kenners, en er is risico op kansenongelijkheid door verschil in toegang tot tools. De brief zegt zelf dat dit nog verdere onderbouwing met voorbeelden en gegevens vraagt.",
+      "Risico dat studenten het denkwerk aan AI overlaten en een product de indruk wekt dat ze de stof beheersen terwijl ze die niet begrijpen.",
+      "Pleidooi om AI-gebruik te sturen en begeleiden in plaats van af te kappen of alleen op regels en detectie in te zetten; leunt op de tekst 'Onderwijs opnieuw uitvinden: eerdere revoluties en de AI-transitie'.",
+      "Zes verzoeken: AI-geletterdheid structureel in het hbo-curriculum; gezamenlijke herinrichting met studenten, docenten, onderzoekers en werkveld; tijd en scholing voor docenten; aandacht voor zelfstandig denken, vakkennis, beoordelen van AI-uitkomsten en verantwoordelijkheid; gelijke kansen bij toegang tot tools.",
+      "Meest uitgesproken verzoek: een landelijke, veilige, neutrale AI-tool die studenten via gesprekken op soft skills beoordeelt, met relevante vakkennis en veilige opslag; verdere voorwaarden zouden later worden bepaald."
+    ],
+    "type": "besluit",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "cognitive-offloading",
+      "docentcompetenties",
+      "hbo",
+      "softskills",
+      "toetsing"
+    ],
+    "relevantie": "De brief is een concreet eindproduct/standpunt dat het Centraal Team kan gebruiken of spiegelen aan de eigen richting voor de challenge, met name de lijn 'herinrichting in plaats van alleen AI-onderwijs'. De zes verzoeken kunnen dienen als referentiekader voor aanbevelingen.",
+    "ook_relevant_voor": [
+      "research",
+      "creator-development"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "",
+    "betrouwbaarheid_toelichting": "Het is een standpunt/pleidooi van studenten en docenten van een HAN-minor, geen onderzoek; de brief noemt geen bronnen of cijfers, behalve een verwijzing naar een interne tekst.",
+    "onzekerheden": "Signalen over misbruik, kloof in AI-kennis en kansenongelijkheid zijn niet onderbouwd met data. De voorgestelde landelijke AI-beoordelingstool voor soft skills is vaag over voorwaarden en roept open vragen op over validiteit, privacy en eerlijkheid van beoordeling. Het is niet duidelijk of de brief al verstuurd is; contactgegevens zijn nog een placeholder. Niet vastgesteld is of 'eigen werk' juist is: de brief lijkt van een HAN-minorgroep en het is onduidelijk of dit het War Room-team zelf is.",
+    "ai": true,
+    "md_pad": "afdelingen/centraal/2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md",
+    "issue": 18
+  },
+  {
     "id": "2026-11-16-122650-ff47",
     "afdeling": "centraal",
     "datum": "2026-11-16T12:26:50+00:00",

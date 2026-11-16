@@ -2,10 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_9 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md) | Onderzoek | ai-in-hoger-onderwijs, arbeidsmarkt, bewijskwaliteit, hbo, softskills | Tein |
 | 2026-11-16 | [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Jens Varwijk |
 | 2026-11-16 | [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, privacy, softskills, toetsing | Pepijn |
 | 2026-11-16 | [Minimale eisen voor een hbo-bachelordiploma in Nederland](2026-11-16-114454-8b55-minimale-eisen-voor-een-hbo-bachelordiploma-in-nederland.md) | Bron / artikel | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, toetsing | Amin |
@@ -17,6 +18,10 @@ _8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)
+- 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)
+- 2026-11-16 - [E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)](../creator-development/2026-11-16-122711-186f-e-learning-onderwijs-opnieuw-ontwerpen-met-ai-voor-hbo-docen.md)
+- 2026-11-16 - [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](../centraal/2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md)
 - 2026-11-16 - [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](../centraal/2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md)
 - 2026-11-16 - [Minimale AI-competenties en basisprogramma voor hbo-docenten](../creator-development/2026-11-16-112501-7898-minimale-ai-competenties-en-basisprogramma-voor-hbo-docenten.md)
 - 2026-11-16 - [Advies: online docentprofessionalisering op schaal met cohorten en menselijke feedback](../creator-development/2026-11-16-112330-db20-advies-online-docentprofessionalisering-op-schaal-met-cohort.md)
