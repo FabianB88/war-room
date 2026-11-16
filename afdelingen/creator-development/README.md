@@ -19,6 +19,7 @@ _10 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Haalbaarheid en kosten van AI-beoordeling van mondelinge opnames](../research/2026-11-16-130003-27a0-haalbaarheid-en-kosten-van-ai-beoordeling-van-mondelinge-opn.md)
 - 2026-11-16 - [Bijlage brandbrief: onderbouwing van AI-signalen in hbo](../centraal/2026-11-16-125743-b69b-bijlage-brandbrief-onderbouwing-van-ai-signalen-in-hbo.md)
 - 2026-11-16 - [Haalbaarheid landelijk AI-systeem voor studentbegeleiding hbo](../research/2026-11-16-125650-cc0a-haalbaarheid-landelijk-ai-systeem-voor-studentbegeleiding-hb.md)
 - 2026-11-16 - [Valide toetsen van individuele kennis in opdrachtgeversprojecten zonder extra stappen](../research/2026-11-16-123215-b4b4-valide-toetsen-van-individuele-kennis-in-opdrachtgeversproje.md)
