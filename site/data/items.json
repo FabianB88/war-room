@@ -1,5 +1,54 @@
 [
   {
+    "id": "2026-11-16-114316-cc8f",
+    "afdeling": "research",
+    "datum": "2026-11-16T11:43:16+00:00",
+    "verwerkt_op": "2026-11-16T11:43:49+00:00",
+    "ingestuurd_door": "Amin",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Toekomstige kijk op onderwijs en AI.docx",
+        "pad": "bestanden/research/2026-11-16-114316-cc8f/Toekomstige kijk op onderwijs en AI.docx",
+        "grootte": 21573
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Is AI-onderwijs de oplossing voor de toekomst van het hbo?",
+    "samenvatting": "Dit is een Deep Research-rapport van Jens Varwijk (16 november 2026) dat onderzoekt of les in AI de oplossing is voor de toekomst van het hbo. De conclusie is dat AI-onderwijs nodig is maar niet voldoende: het ontwerp van onderwijs en toetsing bepaalt of studenten leren, niet kennis over AI. Gestructureerde AI-inzet (zoals een AI-tutor) helpt, terwijl vrij gebruik van een open chatbot het leren kan schaden. Het rapport adviseert eerst vakkennis, dan AI, en toetsen in twee banen. Elke bron krijgt een bewijsgraad van A tot E, en het document noemt ook beweringen die je moet wantrouwen. Het document staat twee keer achter elkaar in de inzending; de inhoud is identiek.",
+    "kernpunten": [
+      "64% van de hbo-afgestudeerden gebruikt AI wekelijks of dagelijks op het werk; taken veranderen vaker (28%) dan dat ze verdwijnen (7%) (ROA/HBO-Monitor 2026, bewijsgraad B).",
+      "In de VS worden jonge starters in AI-gevoelige beroepen 19% minder vaak aangenomen (Stanford 2026, B).",
+      "Een gestructureerde AI-tutor gaf op Harvard ruim 2x zoveel leerwinst (Kestin, A); Turkse scholieren met vrij ChatGPT scoorden 17% lager op een latere toets zonder AI (Bastani, A).",
+      "Zonder vakkennis nemen mensen foute AI-antwoorden over en worden ze er zekerder van ('cognitive surrender', Shaw & Nave, C); Kirschner spreekt van 'outsourcen' van denken.",
+      "Slechts 29% van de studenten vindt dat docenten hen goed kunnen begeleiden bij AI; een losse AI-les verandert nauwelijks hoe studenten werken en er is weinig bewijs dat ze het leren verbeteren.",
+      "Te wantrouwen: de ingetrokken meta-analyse (april 2026) over ChatGPT en leren, 'AI geeft hersenschade' (één kleine studie zonder peer review), AI-detectoren (geen tool haalt betrouwbaar 80%, benadeelt anderstaligen) en 'AI maakt onderwijs voor iedereen beter'.",
+      "Aanbevelingen: per opdracht aangeven hoeveel AI mag (AI Assessment Scale), toetsen in twee banen (zonder AI onder toezicht/mondeling en mét AI), een AI-leerlijn met eerst de basis en dan AI, investeren in docenten; de geïntegreerde strategie wordt het meest verantwoord geacht."
+    ],
+    "type": "onderzoek",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "arbeidsmarkt",
+      "bewijskwaliteit",
+      "cognitive-offloading",
+      "hbo",
+      "toetsing"
+    ],
+    "relevantie": "Het rapport geeft het Centraal Team een onderbouwde richting voor de challenge: AI als onderdeel van herontworpen onderwijs en toetsing, niet als losse les. Het bewijsgraad-systeem en de lijst met te wantrouwen beweringen helpen om zwakke bronnen te vermijden.",
+    "ook_relevant_voor": [
+      "centraal",
+      "creator-development"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Het is een transparant, bronnengebaseerd overzicht met bewijsgraden en benoemde commerciële belangen, maar het is een secundaire synthese die hier niet met de oorspronkelijke bronnen is gecontroleerd.",
+    "onzekerheden": "Veel harde studies komen uit het voortgezet onderwijs of het buitenland (Harvard, Turkije, VS); toepasbaarheid op het Nederlandse hbo is een aanname. Het meeste onderzoek meet korte-termijneffecten. Sommige bronnen hebben commercieel belang (o.a. Microsoft, edtech). De 'hersenschade'-claim is slechts een hypothese. De bronvermelding is aan het einde van het document afgekapt ('Kirschne...'), en de bewijsgraad van enkele claims (bijv. de 29% en de OECD-conclusie) is niet vermeld.",
+    "ai": true,
+    "md_pad": "afdelingen/research/2026-11-16-114316-cc8f-is-ai-onderwijs-de-oplossing-voor-de-toekomst-van-het-hbo.md",
+    "issue": 11
+  },
+  {
     "id": "2026-11-16-114139-a284",
     "afdeling": "research",
     "datum": "2026-11-16T11:41:39+00:00",
