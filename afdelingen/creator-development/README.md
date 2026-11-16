@@ -17,6 +17,7 @@ _8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Valide toetsen van individuele kennis in opdrachtgeversprojecten zonder extra stappen](../research/2026-11-16-123215-b4b4-valide-toetsen-van-individuele-kennis-in-opdrachtgeversproje.md)
 - 2026-11-16 - [Softskills en life skills per onderwijsrichting: literatuuroverzicht](../centraal/2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md)
 - 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)
 - 2026-11-16 - [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](../centraal/2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md)
