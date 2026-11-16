@@ -10,6 +10,7 @@ _1 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](../research/2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md)
 - 2026-11-16 - [Minimale eisen voor een hbo-bachelordiploma in Nederland](../research/2026-11-16-114454-8b55-minimale-eisen-voor-een-hbo-bachelordiploma-in-nederland.md)
 - 2026-11-16 - [Is AI-onderwijs de oplossing voor de toekomst van het hbo?](../research/2026-11-16-114316-cc8f-is-ai-onderwijs-de-oplossing-voor-de-toekomst-van-het-hbo.md)
 - 2026-11-16 - [Plagiaat en AI in het hbo: regels en aanbevelingen](../research/2026-11-16-114139-a284-plagiaat-en-ai-in-het-hbo-regels-en-aanbevelingen.md)

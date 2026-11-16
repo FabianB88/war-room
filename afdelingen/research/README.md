@@ -2,10 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_6 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_7 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, privacy, softskills, toetsing | Pepijn |
 | 2026-11-16 | [Minimale eisen voor een hbo-bachelordiploma in Nederland](2026-11-16-114454-8b55-minimale-eisen-voor-een-hbo-bachelordiploma-in-nederland.md) | Bron / artikel | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, toetsing | Amin |
 | 2026-11-16 | [Is AI-onderwijs de oplossing voor de toekomst van het hbo?](2026-11-16-114316-cc8f-is-ai-onderwijs-de-oplossing-voor-de-toekomst-van-het-hbo.md) | Onderzoek | ai-in-hoger-onderwijs, arbeidsmarkt, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Amin |
 | 2026-11-16 | [Plagiaat en AI in het hbo: regels en aanbevelingen](2026-11-16-114139-a284-plagiaat-en-ai-in-het-hbo-regels-en-aanbevelingen.md) | Bron / artikel | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, toetsing, werkwijze | Amin |
