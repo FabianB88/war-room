@@ -2,16 +2,19 @@
 
 Bepaalt de richting, brengt alles samen en maakt de inhoud.
 
-_3 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_4 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Softskills en life skills per onderwijsrichting: literatuuroverzicht](2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md) | Onderzoek | arbeidsmarkt, bewijskwaliteit, hbo, professionalisering, softskills | Jibbe |
 | 2026-11-16 | [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md) | Besluit | ai-in-hoger-onderwijs, cognitive-offloading, docentcompetenties, hbo, softskills, toetsing | Fien |
 | 2026-11-16 | [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md) | Overig | ai-in-hoger-onderwijs, cognitive-offloading, docentcompetenties, hbo, softskills, toetsing | Fien |
 | 2026-11-16 | [Welkom bij de War Room: uitleg documenten delen](2026-11-16-110711-9fcc-welkom-bij-de-war-room-uitleg-documenten-delen.md) | Overig | documenten-delen, onboarding, privacy, werkwijze |  |
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Prioritaire soft skills voor Nederlands onderwijs en arbeidsmarkt](../research/2026-11-16-122843-c6f1-prioritaire-soft-skills-voor-nederlands-onderwijs-en-arbeids.md)
+- 2026-11-16 - [AI-beoordeling van opnames: haalbaarheid, bias en regelgeving](../creator-development/2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md)
 - 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)
 - 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)
 - 2026-11-16 - [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](../creator-development/2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md)

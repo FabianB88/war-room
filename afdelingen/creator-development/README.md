@@ -2,10 +2,11 @@
 
 Maakt tools, prototypes en content.
 
-_8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_9 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [AI-beoordeling van opnames: haalbaarheid, bias en regelgeving](2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, privacy, toetsing | Fabian |
 | 2026-11-16 | [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, privacy, toetsing | Fabian |
 | 2026-11-16 | [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](2026-11-16-122712-b34d-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, privacy, toetsing | Fabian |
 | 2026-11-16 | [E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)](2026-11-16-122711-186f-e-learning-onderwijs-opnieuw-ontwerpen-met-ai-voor-hbo-docen.md) | Tool / prototype | ai-in-hoger-onderwijs, docentcompetenties, hbo, professionalisering, toetsing | Fabian |
@@ -17,6 +18,8 @@ _8 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Softskills en life skills per onderwijsrichting: literatuuroverzicht](../centraal/2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md)
+- 2026-11-16 - [Prioritaire soft skills voor Nederlands onderwijs en arbeidsmarkt](../research/2026-11-16-122843-c6f1-prioritaire-soft-skills-voor-nederlands-onderwijs-en-arbeids.md)
 - 2026-11-16 - [Prioritering van soft skills voor Nederlandse onderwijsinstellingen](../research/2026-11-16-122724-12b1-prioritering-van-soft-skills-voor-nederlandse-onderwijsinste.md)
 - 2026-11-16 - [Brandbrief HAN-minor: AI-geletterdheid als onderdeel van herinrichting hbo](../centraal/2026-11-16-122703-19d0-brandbrief-han-minor-ai-geletterdheid-als-onderdeel-van-heri.md)
 - 2026-11-16 - [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](../centraal/2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md)

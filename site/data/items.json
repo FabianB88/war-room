@@ -1,5 +1,148 @@
 [
   {
+    "id": "2026-11-16-122848-131b",
+    "afdeling": "centraal",
+    "datum": "2026-11-16T12:28:48+00:00",
+    "verwerkt_op": "2026-11-16T12:30:31+00:00",
+    "ingestuurd_door": "Jibbe",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Softskills en life skills voor studenten onderzoek per onderwijsrichting.pdf",
+        "pad": "bestanden/centraal/2026-11-16-122848-131b/Softskills en life skills voor studenten onderzoek per onderwijsrichting.pdf",
+        "grootte": 401566
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Softskills en life skills per onderwijsrichting: literatuuroverzicht",
+    "samenvatting": "Dit overzicht vergelijkt welke softskills en life skills studenten nodig hebben in zorg, onderwijs, economie en techniek, op basis van werkgevers-, beleids- en monitoronderzoeken (o.a. WEF, OESO, NIVEL, NACE, RIVM, Nibud). De basis is overal gelijk: communiceren, samenwerken, kritisch denken en veerkracht. De nadruk verschilt per sector, en life skills (mentale gezondheid, hulp zoeken, geldzaken, zelfsturing) bepalen mede hoe goed studenten studeren. De auteur geeft zelf aan dat de cijfers deels ouder, buitenlands en zelfgerapporteerd zijn en als sterke aanwijzing moeten worden gelezen. Een deel van de tabellen (praktijkvoorbeelden, oefentips, vergelijkingsschema) is eigen uitwerking van de auteur.",
+    "kernpunten": [
+      "WEF 2025: analytisch denken is de top-kernvaardigheid (~70% van de werkgevers), gevolgd door veerkracht/flexibiliteit (67%); werkgevers verwachten dat 39% van de kernvaardigheden tegen 2030 verandert.",
+      "Zelfinschatting-kloof (NACE, VS): afgestudeerden beoordelen zichzelf veel hoger dan werkgevers, bv. kritisch denken 81% vs 56% en communicatie 78% vs 54%; alleen bij teamwork zijn ze het eens (84% vs 82%).",
+      "Techniek: starters bleven op 24 van 26 soft skills achter bij het belang dat werkgevers eraan hechten; grootste kloof bij communiceren met uiteenlopende groepen (Hirudayaraj e.a., 2021). FME/SEO (n=34, 2022) noemt teamwork en aanpassingsvermogen als grootste tekorten.",
+      "Zorg: 62% van de werkgevers verwacht meer mentale belasting (tegenover 30% in andere sectoren, TNO 2025); NIVEL-cijfers zijn uit 2015. Onderwijs: ongeveer een kwart van de startende leraren stopt binnen enkele jaren; coaching vanaf de start verkleint uitval (RUG).",
+      "Mentale gezondheid studenten: 51% psychische klachten, waarvan 12% ernstig (RIVM-monitor 2021, >28.000 studenten, tijdens corona); 2025-meting toont voorzichtige verbetering. Dopmeijer: >70% prestatiedruk, ~40% eenzaamheid, veel studenten zoeken geen hulp.",
+      "Geldzaken (Nibud 2024): 57% van hbo/wo-studenten komt makkelijk rond, 9% (heel) moeilijk; ongeveer een derde weet niet dat DUO tijdens de studie rente rekent.",
+      "Drie clusters over sectoren heen: denken, omgaan met anderen, omgaan met jezelf; skills leer je vooral door praktijk, stages en actief feedback vragen."
+    ],
+    "type": "onderzoek",
+    "tags": [
+      "arbeidsmarkt",
+      "bewijskwaliteit",
+      "hbo",
+      "professionalisering",
+      "softskills"
+    ],
+    "relevantie": "Geeft een breed, bronnengebaseerd kader voor de vraag welke vaardigheden studenten in een AI-tijdperk nodig hebben, bruikbaar als achtergrond voor de richting van de challenge. De uitkomsten zijn vooral indicatief; voor een onderbouwde aanbeveling zijn gerichte, recentere en Nederlandse bronnen nodig.",
+    "ook_relevant_voor": [
+      "research",
+      "creator-development"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Het is een transparante, goed gebrongde literatuurcompilatie met expliciete kanttekeningen, maar vooral gebaseerd op werkgevers-/beleidsenquêtes en zelfrapportage, deels oud of buitenlands, en meerdere bronnen zijn alleen via zoekresultaten gelezen.",
+    "onzekerheden": "Cijfers zijn vooral zelfgerapporteerd en definities verschillen per bron; NIVEL (2015), FT (2018) en FME (2022) zijn verouderd, kleine steekproeven (FME n=34, FT n=48), NACE is Amerikaans. De RIVM-cijfers zijn uit coronatijd. De details van de GenAI-omslag (ROA) kon de auteur niet lezen. Een deel van de bronnen (met * gemarkeerd) is niet volledig geopend. Het vergelijkingsschema, de praktijkvoorbeelden en de oefentips zijn eigen weging/uitwerking en niet gemeten of uit de bronnen afkomstig.",
+    "ai": true,
+    "md_pad": "afdelingen/centraal/2026-11-16-122848-131b-softskills-en-life-skills-per-onderwijsrichting-literatuurov.md",
+    "issue": 25
+  },
+  {
+    "id": "2026-11-16-122843-c6f1",
+    "afdeling": "research",
+    "datum": "2026-11-16T12:28:43+00:00",
+    "verwerkt_op": "2026-11-16T12:30:16+00:00",
+    "ingestuurd_door": "Tein",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "Welke soft skills moeten Nederlandse onderwijsinstellingen prioriteren voor de arbeidsmarkt van de toekomst.docx",
+        "pad": "bestanden/research/2026-11-16-122843-c6f1/Welke soft skills moeten Nederlandse onderwijsinstellingen prioriteren voor de arbeidsmarkt van de toekomst.docx",
+        "grootte": 29590
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "Prioritaire soft skills voor Nederlands onderwijs en arbeidsmarkt",
+    "samenvatting": "Dit is een Deep Research-synthese (auteur en afdeling niet opgegeven, 16 november 2026) over welke soft skills Nederlandse onderwijsinstellingen moeten prioriteren. Het rapport komt uit op zeven universele kernvaardigheden: aanpassingsvermogen en veerkracht, kritisch en analytisch denken, probleemoplossen, communicatie, samenwerken, zelfregulatie en leren leren, en ethisch handelen. Daarbovenop komen sectorspecifieke vaardigheden voor tien beroepssectoren. Effectieve ontwikkeling vraagt volgens het rapport expliciete uitleg, realistisch oefenen, feedback, reflectie en herhaling. AI kan daarbij ondersteunen (bijvoorbeeld rollenspelsimulaties), maar mag de eigen vaardigheidsontwikkeling van studenten niet vervangen. De rangorde is een eigen analytisch model, geen gemeten ranglijst.",
+    "kernpunten": [
+      "Zeven kernvaardigheden vormen de robuuste sectoroverstijgende basis; ze blijven bij een gevoeligheidsanalyse met andere gewichten grotendeels bovenaan, maar hun onderlinge volgorde verandert.",
+      "WEF (2025): ongeveer 70% van de werkgevers ziet analytisch denken als kernvaardigheid en verwacht dat ~39% van de kernvaardigheden richting 2030 verandert.",
+      "HBO-Monitor 2024: zelfstandig werken is in alle zeven hbo-sectoren belangrijk; in vijf sectoren staat duidelijk communiceren in de top drie, en afgestudeerden schatten het gevraagde communicatieniveau hoger in dan hun eigen niveau.",
+      "Systematische review van Orih et al. (2024): positieve resultaten bij 38 interventies, maar slechts 3 studies voldeden aan de strengste kwaliteitscriteria. Meta-analyse Alanazi et al. (2022): simulatieonderwijs in de zorg verbetert teamwork en communicatie (8 RCT's, 819 studenten).",
+      "Het onderzoek vindt geen universeel beste lesvorm; geschikte vormen zijn o.a. rollenspel, projectonderwijs, simulatie, peerfeedback, stage en reflectie, afgestemd op de vaardigheid.",
+      "AI-rol volgens het rapport: fictieve klant of opdrachtgever spelen, argumenten aandragen om te beoordelen, casussen variëren en plannen ondersteunen. De langetermijneffecten van generatieve AI op soft skills zijn onzeker (ILO, 2026).",
+      "Implementatie in drie niveaus: essentieel (zeven kernvaardigheden in elke opleiding), sectorgericht en aanvullend; vaardigheden moeten herhaald terugkomen in bestaande lessen, projecten en stages."
+    ],
+    "type": "onderzoek",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "arbeidsmarkt",
+      "bewijskwaliteit",
+      "hbo",
+      "softskills"
+    ],
+    "relevantie": "Geeft de challenge een onderbouwd kader voor welke menselijke vaardigheden in een AI-tijdperk centraal moeten staan en hoe AI als oefenmiddel kan dienen zonder eigen vaardigheidsontwikkeling te vervangen. Bruikbaar als basis voor adviezen en voor prototypes zoals AI-gestuurde rollenspel- of feedbacktools; de zwakke bewijskracht van de rangorde moet daarbij wel benoemd worden.",
+    "ook_relevant_voor": [
+      "centraal",
+      "creator-development"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Het is een gerichte evidence synthesis (geen PRISMA-review) op basis van gerenommeerde bronnen (WEF, ILO, Cedefop, ROA, peer-reviewed reviews), maar de scores en rangordes zijn eigen analytische keuzes zonder auteur of onafhankelijke toetsing.",
+    "onzekerheden": "De top 12 en sectorranglijsten zijn eigen beoordelingen met zelfgekozen gewichten, niet gemeten bij een representatieve werkgeversgroep. Werkgeversenquêtes tonen belang, geen causaal effect op prestaties. Onderwijsstudies verschillen in kwaliteit en doelgroep (zorgresultaten zijn niet zonder meer generaliseerbaar naar alle hbo-opleidingen), en het effect van generatieve AI op soft skills op lange termijn is onbekend. Auteur en afdeling zijn niet opgegeven, en het rapport is gegenereerd met Deep Research; de bronnenlijst is overgenomen en niet opnieuw gecontroleerd. De grafiek in het document was niet leesbaar als data.",
+    "ai": true,
+    "md_pad": "afdelingen/research/2026-11-16-122843-c6f1-prioritaire-soft-skills-voor-nederlands-onderwijs-en-arbeids.md",
+    "issue": 24
+  },
+  {
+    "id": "2026-11-16-122835-47ac",
+    "afdeling": "creator-development",
+    "datum": "2026-11-16T12:28:35+00:00",
+    "verwerkt_op": "2026-11-16T12:30:04+00:00",
+    "ingestuurd_door": "Fabian",
+    "notitie": "",
+    "link": "",
+    "bestanden": [
+      {
+        "naam": "AI centraal landelijk.docx",
+        "pad": "bestanden/creator-development/2026-11-16-122835-47ac/AI centraal landelijk.docx",
+        "grootte": 18517
+      }
+    ],
+    "opmerkingen": [],
+    "titel": "AI-beoordeling van opnames: haalbaarheid, bias en regelgeving",
+    "samenvatting": "Het document is een analyse (waarschijnlijk een AI-gegenereerd of expertantwoord, bron niet vermeld) over de vraag of een landelijk AI-systeem opnames van studenten kan beoordelen zonder bias. Conclusie: beoordelen is technisch goed haalbaar, maar een systeem zonder bias is niet te bouwen omdat 'geen bias' niet eenduidig te definiëren is. Wel kan een systeem aantoonbaar eerlijker en consistenter zijn dan menselijke beoordeling. Het document beschrijft biasbronnen (accent, opnamekwaliteit, video, rubric), wettelijke kaders (EU AI Act, AVG art. 22, verbod op emotieherkenning) en geeft adviezen voor een veilige aanpak. Het sluit af met een haalbaarheidstabel van prototype tot landelijke uitrol.",
+    "kernpunten": [
+      "Technisch haalbaar: spraak-naar-tekst in het Nederlands werkt goed en taalmodellen kunnen een transcript langs een rubric scoren, vaak dicht bij de overeenstemming tussen twee menselijke beoordelaars (zonder bronvermelding of cijfers).",
+      "Biasbronnen: spraakherkenning maakt meer fouten bij niet-moedertaalsprekers, regionale accenten en stotteren; opnamekwaliteit hangt samen met sociaaleconomische achtergrond; video kan uiterlijk laten meewegen; een rubric met culturele normen wordt door AI consistent maar niet eerlijk toegepast.",
+      "'Eerlijkheid' heeft meerdere wiskundig onverenigbare definities (gelijke gemiddelden, gelijke foutmarges, gelijke betekenis van score per groep); kiezen is een politieke en onderwijskundige keuze.",
+      "Bias meten vraagt gevoelige gegevens (bijv. migratieachtergrond), wat onder de AVG bijzondere persoonsgegevens zijn; de AI Act staat verwerking voor bias-detectie onder strikte voorwaarden toe.",
+      "Regelgeving: AI die leerresultaten beoordeelt is hoog risico onder de EU AI Act (verplichtingen 2026–2027, uitstel voorgesteld); emotieherkenning in het onderwijs is sinds februari 2025 verboden; AVG art. 22 vereist betekenisvolle menselijke tussenkomst.",
+      "Advies: AI als tweede beoordelaar die afwijkingen signaleert, alleen audio of transcript gebruiken, spraakherkenningsfouten per groep meten, starten formatief en laagdrempelig, en vergelijken met menselijke beoordeling in plaats van met perfectie.",
+      "Haalbaarheid: prototype voor één vaardigheid in maanden; gevalideerd en bias-getoetst 1–2 jaar met grote diverse dataset; landelijk en juridisch in orde vele jaren en tientallen miljoenen plus governance."
+    ],
+    "type": "onderzoek",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "bewijskwaliteit",
+      "privacy",
+      "toetsing"
+    ],
+    "relevantie": "Het geeft een realistisch kader voor de challenge over AI in beoordeling: begin klein, formatief en met AI als tweede beoordelaar, en houd rekening met bias, AVG en de AI Act. Het team kan hiermee een haalbare, verdedigbare richting kiezen of een prototype voor één vaardigheid afbakenen.",
+    "ook_relevant_voor": [
+      "centraal",
+      "research"
+    ],
+    "brontype": "overig",
+    "betrouwbaarheid": "middel",
+    "betrouwbaarheid_toelichting": "Inhoudelijk consistent met bekende kaders (AI Act, AVG), maar zonder auteur, bronnen of cijfers en vermoedelijk AI-gegenereerd.",
+    "onzekerheden": "Bron, auteur en datum zijn niet vermeld en het document bevat geen verwijzingen; claims over modelprestaties ten opzichte van menselijke beoordelaars en de kosten (tientallen miljoenen) zijn onbewezen. Invoeringsdata van de AI Act zijn nog onzeker door voorgesteld uitstel en moeten worden gecontroleerd. Er is geen notitie van Fabian meegegeven over het doel van de inzending.",
+    "ai": true,
+    "md_pad": "afdelingen/creator-development/2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md",
+    "issue": 23
+  },
+  {
     "id": "2026-11-16-122724-12b1",
     "afdeling": "research",
     "datum": "2026-11-16T12:27:24+00:00",
