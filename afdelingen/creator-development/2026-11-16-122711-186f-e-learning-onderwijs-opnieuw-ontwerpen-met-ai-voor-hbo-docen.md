@@ -8,7 +8,7 @@
 
 ## Samenvatting
 
-Fabian (Creator & Development) heeft een conceptversie gemaakt van een e-learning voor hbo-docenten die hen van 'AI-vaardig' naar 'AI-didactisch vaardig' brengt, zodat ze onderwijs opnieuw kunnen ontwerpen. De e-learning bestaat uit een start en negen modules in drie lagen (AI-vaardig, AI-didactisch, herontwerpen) en dekt acht competonties uit het rapport 'Minimale AI-competenties voor hbo-docenten'. De docent werkt de hele cursus aan één eigen les, opdracht of toets. De structuur staat, maar de inhoud is een eerste invulling die nog door echte content vervangen moet worden. Er is een online versie, een bouwbestand voor de E-learning Bouwer en een SCORM 1.2-pakket voor Brightspace; het zip-bestand kon niet worden gelezen.
+Fabian (Creator & Development) heeft een conceptversie gemaakt van een e-learning voor hbo-docenten die hen van 'AI-vaardig' naar 'AI-didactisch vaardig' brengt, zodat ze onderwijs opnieuw kunnen ontwerpen. De e-learning bestaat uit een start en negen modules in drie lagen (AI-vaardig, AI-didactisch, herontwerpen) en dekt acht competenties uit het rapport 'Minimale AI-competenties voor hbo-docenten'. De docent werkt de hele cursus aan één eigen les, opdracht of toets. De structuur staat, maar de inhoud is een eerste invulling die nog door echte content vervangen moet worden. Er is een online versie, een bouwbestand voor de E-learning Bouwer en een SCORM 1.2-pakket voor Brightspace.
 
 ## Kernpunten
 
@@ -46,4 +46,3 @@ https://fabianb88.github.io/ai-didactisch-vaardig/
 
 Eerste test van een e-learning voor hbo-docenten: van AI-vaardig naar AI-didactisch vaardig. Gebaseerd op het rapport Minimale AI-competenties voor hbo-docenten. Online te bekijken via de link; SCORM-pakket voor Brightspace zit erbij.
 
-> **Let op:** onderwijs-opnieuw-ontwerpen-met-ai-scorm.zip: bestandstype kan AI niet lezen (wel downloadbaar)

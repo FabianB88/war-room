@@ -151,11 +151,9 @@
         "grootte": 528462
       }
     ],
-    "opmerkingen": [
-      "onderwijs-opnieuw-ontwerpen-met-ai-scorm.zip: bestandstype kan AI niet lezen (wel downloadbaar)"
-    ],
+    "opmerkingen": [],
     "titel": "E-learning 'Onderwijs opnieuw ontwerpen met AI' voor hbo-docenten (concept)",
-    "samenvatting": "Fabian (Creator & Development) heeft een conceptversie gemaakt van een e-learning voor hbo-docenten die hen van 'AI-vaardig' naar 'AI-didactisch vaardig' brengt, zodat ze onderwijs opnieuw kunnen ontwerpen. De e-learning bestaat uit een start en negen modules in drie lagen (AI-vaardig, AI-didactisch, herontwerpen) en dekt acht competonties uit het rapport 'Minimale AI-competenties voor hbo-docenten'. De docent werkt de hele cursus aan één eigen les, opdracht of toets. De structuur staat, maar de inhoud is een eerste invulling die nog door echte content vervangen moet worden. Er is een online versie, een bouwbestand voor de E-learning Bouwer en een SCORM 1.2-pakket voor Brightspace; het zip-bestand kon niet worden gelezen.",
+    "samenvatting": "Fabian (Creator & Development) heeft een conceptversie gemaakt van een e-learning voor hbo-docenten die hen van 'AI-vaardig' naar 'AI-didactisch vaardig' brengt, zodat ze onderwijs opnieuw kunnen ontwerpen. De e-learning bestaat uit een start en negen modules in drie lagen (AI-vaardig, AI-didactisch, herontwerpen) en dekt acht competenties uit het rapport 'Minimale AI-competenties voor hbo-docenten'. De docent werkt de hele cursus aan één eigen les, opdracht of toets. De structuur staat, maar de inhoud is een eerste invulling die nog door echte content vervangen moet worden. Er is een online versie, een bouwbestand voor de E-learning Bouwer en een SCORM 1.2-pakket voor Brightspace.",
     "kernpunten": [
       "Opbouw: startmodule (instapopdracht, zelfscan) plus 9 modules en een bronnenpagina, verdeeld over drie lagen: AI-vaardig (module 1-3), AI-didactisch (module 4-8) en herontwerpen (module 9).",
       "Elke module volgt hetzelfde patroon: leerdoelen, uitleg, oefenen (meerkeuze, koppelen, sorteren, scenario), praktijkopdracht in de eigen les en koppeling aan het 'aantoonbaar minimum' van de competentie.",
