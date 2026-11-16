@@ -61,6 +61,7 @@
   // ------------------------------------------------------------ tonen
   function kaart(i) {
     const ext = (n) => (n.includes(".") ? n.split(".").pop() : "").slice(0, 4).toUpperCase();
+    const link = /^https?:\/\//i.test(i.link || "") ? i.link : "";
     return `<article class="doc" style="--afd:${afdKleur(i.afdeling)}">
       <button class="doc-kop" aria-expanded="false">
         <span class="meta"><span class="chip afd">${esc(afdNaam(i.afdeling))}</span>
@@ -74,10 +75,9 @@
         ${i.relevantie ? `<p><strong>Waarom relevant:</strong> ${esc(i.relevantie)}</p>` : ""}
         ${i.brontype || i.betrouwbaarheid ? `<p class="muted klein">Bron: ${esc(i.brontype || "–")}${i.betrouwbaarheid ? ` · betrouwbaarheid ${esc(i.betrouwbaarheid)}` : ""}${i.onzekerheden ? ` · ⚠ ${esc(i.onzekerheden)}` : ""}</p>` : ""}
         ${i.notitie ? `<p class="muted"><em>“${esc(i.notitie)}”</em></p>` : ""}
-        ${/^https?:\/\//i.test(i.link || "") ? `<p><a href="${esc(i.link)}" target="_blank" rel="noopener noreferrer">${esc(i.link)}</a></p>` : ""}
         <button class="verwijder" data-archiveer="${esc(i.id)}">🗑 Verwijderen</button>
       </div>
-      ${i.bestanden?.length ? `<div class="doc-dl">${i.bestanden.map((b) =>
+      ${i.bestanden?.length || link ? `<div class="doc-dl">${link ? `<a href="${esc(link)}" target="_blank" rel="noopener noreferrer" class="dl dl-link">🔗 Openen <span class="muted">${esc(link.replace(/^https?:\/\//, "").replace(/\/$/, "").slice(0, 60))}</span></a>` : ""}${(i.bestanden || []).map((b) =>
         `<a href="${esc(encodeURI(b.pad))}" download="${esc(b.naam)}" class="dl"><span class="ext">${esc(ext(b.naam))}</span>${esc(b.naam)} <span class="muted">${grootte(b.grootte)} ↓</span></a>`).join("")}</div>` : ""}
     </article>`;
   }

@@ -284,3 +284,4 @@ label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-
 .leeg { text-align: center; padding: 30px 0; }
 .verwijder { margin-top: 6px; border: 1px solid var(--rand); background: none; color: var(--zacht); border-radius: 8px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
 .verwijder:hover { color: var(--fout); border-color: var(--fout); }
+.dl-link { border-color: var(--accent); font-weight: 600; }
