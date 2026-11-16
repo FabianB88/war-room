@@ -1,54 +1,5 @@
 [
   {
-    "id": "2026-11-16-121135-8e78",
-    "afdeling": "research",
-    "datum": "2026-11-16T12:11:35+00:00",
-    "verwerkt_op": "2026-11-16T12:12:04+00:00",
-    "ingestuurd_door": "Tein",
-    "notitie": "",
-    "link": "",
-    "bestanden": [
-      {
-        "naam": "Soft skills.docx",
-        "pad": "bestanden/research/2026-11-16-121135-8e78/Soft skills.docx",
-        "grootte": 46710
-      }
-    ],
-    "opmerkingen": [],
-    "titel": "Soft skills: prioriteiten voor Nederlands onderwijs per sector",
-    "samenvatting": "Dit is een omvangrijk evidence-synthese-rapport (geen volledig PRISMA-review) over welke soft skills Nederlandse onderwijsinstellingen moeten prioriteren, hoe dit per sector verschilt en welke onderwijsmethoden effectief zijn. Op basis van een zelf ontworpen gewogen scoremodel (vijf criteria, ordinale 1–5-scores) komt het uit op een kern van zeven vaardigheden: adaptiviteit/veerkracht, kritisch/analytisch denken, probleemoplossen, communicatie, samenwerken, zelfregulatie/leren leren en ethiek/verantwoordelijkheid. Sectorverschillen zitten vooral in accent, niet in totaal andere competentiesets. Voor onderwijs wordt een combinatie van expliciete instructie, authentieke toepassing, feedback, herhaling en reflectie aanbevolen, met beoordeling via meerdere bronnen (triangulatie). Het rapport benadrukt zelf dat de rangorde binnen de top zeven niet robuust is.",
-    "kernpunten": [
-      "Kern van zeven prioriteit-1-skills: adaptiviteit/veerkracht (5,00), kritisch/analytisch denken en probleemoplossen (4,90), communicatie, samenwerken, zelfregulatie/leren leren en ethiek (elk 4,75); alleen de groep van zeven is robuust, niet de interne volgorde (gevoeligheidsanalyse).",
-      "Nederlandse data: HBO-Monitor 2024 zet zelfstandig werken in alle zeven hbo-sectoren bovenaan; communicatie staat in 5 van 7 sectoren in de top 3 en afgestudeerden ervaren een tekort t.o.v. het vereiste niveau. ROA-analyse (>106.000 afgestudeerden, 2004–2024): samenwerken en creativiteit blijven stabiel sinds GenAI.",
-      "Arbeidsmarkt: UWV meldt 45% moeilijk vervulbare vacatures in 2025; Cedefop verwacht dat het aandeel hoogopgeleiden in Nederland stijgt van 42% (2022) naar 55% (2035). WEF: analytisch denken wordt door ~7 op de 10 werkgevers als kernvaardigheid genoemd.",
-      "Sectoraccenten: zorg (empathie, communicatie), ICT (probleemoplossen, leren leren), techniek (verantwoordelijkheid, veiligheid), zakelijk (analyse, klantgerichtheid), retail/hospitality (service, stressbestendigheid), logistiek (planning, scenario-denken). Sectorranglijsten zijn eigen synthese, geen officiële top-10's.",
-      "Effectiviteit methoden: simulatie in zorg (meta-analyse 8 RCT's, 819 studenten: teamwork g=0,41, communicatie g=0,54), coöperatief leren (second-order meta-analyse, gem. effect 0,71), project- en werkplekleren veelbelovend maar heterogeen; review van 38 interventies had slechts 3 studies van hoogste kwaliteit.",
-      "Beoordeling: zelfrapportage domineert maar meet percepties; aanbevolen is triangulatie (authentieke taken, observatie, peerfeedback, portfolio, situational judgement tests).",
-      "AI wordt gezien als contextveranderaar en oefenmiddel (oefenklant, feedbackpartner); bewijs dat GenAI soft skills zelf verbetert ontbreekt nog. AI-geletterdheid wordt niet als soft skill gerekend."
-    ],
-    "type": "onderzoek",
-    "tags": [
-      "ai-in-hoger-onderwijs",
-      "arbeidsmarkt",
-      "bewijskwaliteit",
-      "hbo",
-      "softskills",
-      "toetsing"
-    ],
-    "relevantie": "Biedt een onderbouwd kader (kern van zeven skills, sectoraccenten, didactiek en beoordeling) om te bepalen op welke vaardigheden de challenge zich richt en hoe AI daarin past. Bruikbaar als basis voor richtingskeuzes en voor tools/prototypes die soft skills oefenen of beoordelen, mits de beperkingen worden meegewogen.",
-    "ook_relevant_voor": [
-      "centraal",
-      "creator-development"
-    ],
-    "brontype": "eigen werk",
-    "betrouwbaarheid": "middel",
-    "betrouwbaarheid_toelichting": "Breed en transparant opgebouwd uit gezaghebbende bronnen (UWV, ROA, WEF, OECD, ILO, Cedefop), maar de rangordes en sectorlijsten zijn eigen ordinale beoordelingen en geen peer-reviewed, volledig systematisch onderzoek.",
-    "onzekerheden": "Scores en gewichten zijn analytische keuzes; alleen de groep van zeven is robuust, niet de volgorde. Sectorrangschikkingen zijn deels gebaseerd op kwalitatieve of trendmatige bronnen (zekerheid middel). Sterkste onderwijsbewijs (simulatie) komt uit de zorg en is niet zonder meer te generaliseren; veel studies gebruiken zelfrapportage, korte interventies of buitenlandse populaties (bijv. Turkse SEL-meta-analyse). Effect van generatieve AI op toekomstige vraag naar soft skills is onzeker. De CBS-vacaturestatistiek is niet zelf geanalyseerd. Enkele bronverwijzingen zijn onvolledig (bijv. '2024-review' zonder auteur), enkele bronnen uit de tekst staan niet in de literatuurlijst, en een bron is gedateerd 'tot en met 16 november 2026' (de datum van inzending). De tabellen zijn wel in het materiaal aanwezig.",
-    "ai": true,
-    "md_pad": "afdelingen/research/2026-11-16-121135-8e78-soft-skills-prioriteiten-voor-nederlands-onderwijs-per-secto.md",
-    "issue": 15
-  },
-  {
     "id": "2026-11-16-120234-46a2",
     "afdeling": "research",
     "datum": "2026-11-16T12:02:34+00:00",
