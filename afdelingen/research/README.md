@@ -2,8 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_0 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_1 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
+| Datum | Titel | Type | Tags | Door |
+|---|---|---|---|---|
+| 2026-11-16 | [Controleerbaarheid van softskills-leren in het hbo bij AI-gebruik](2026-11-16-113849-4272-controleerbaarheid-van-softskills-leren-in-het-hbo-bij-ai-ge.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, docentcompetenties, hbo, toetsing | Pepijn |
 
 ## Ook relevant voor deze afdeling
 

@@ -10,6 +10,7 @@ _1 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Controleerbaarheid van softskills-leren in het hbo bij AI-gebruik](../research/2026-11-16-113849-4272-controleerbaarheid-van-softskills-leren-in-het-hbo-bij-ai-ge.md)
 - 2026-11-16 - [Minimale AI-competenties en basisprogramma voor hbo-docenten](../creator-development/2026-11-16-112501-7898-minimale-ai-competenties-en-basisprogramma-voor-hbo-docenten.md)
 - 2026-11-16 - [Advies: online docentprofessionalisering op schaal met cohorten en menselijke feedback](../creator-development/2026-11-16-112330-db20-advies-online-docentprofessionalisering-op-schaal-met-cohort.md)
 - 2026-11-16 - [Minimale AI-competenties voor hbo-docenten: onderbouwing en basisprogramma](../creator-development/2026-11-16-112209-31f8-minimale-ai-competenties-voor-hbo-docenten-onderbouwing-en-b.md)

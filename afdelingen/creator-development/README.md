@@ -14,4 +14,5 @@ _5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Controleerbaarheid van softskills-leren in het hbo bij AI-gebruik](../research/2026-11-16-113849-4272-controleerbaarheid-van-softskills-leren-in-het-hbo-bij-ai-ge.md)
 - 2026-11-16 - [Welkom bij de War Room: uitleg documenten delen](../centraal/2026-11-16-110711-9fcc-welkom-bij-de-war-room-uitleg-documenten-delen.md)
