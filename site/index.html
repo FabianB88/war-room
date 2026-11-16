@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>War Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">WR</span>
+        <div>
+          <h1 id="app-naam">War Room</h1>
+          <p id="challenge" class="muted"></p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-view="overzicht" aria-selected="true">Overzicht</button>
+        <button role="tab" data-view="insturen" aria-selected="false">+ Insturen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- ============ OVERZICHT ============ -->
+    <section id="view-overzicht">
+      <div id="afdelingen" class="afd-kaarten"></div>
+
+      <div class="filters">
+        <input type="search" id="zoek" placeholder="Zoek in titels, samenvattingen, tags…" aria-label="Zoeken">
+        <select id="f-afdeling" aria-label="Afdeling"><option value="">Alle afdelingen</option></select>
+        <select id="f-type" aria-label="Type"><option value="">Alle types</option></select>
+        <select id="f-tag" aria-label="Tag"><option value="">Alle tags</option></select>
+        <select id="sorteer" aria-label="Sorteren">
+          <option value="nieuw">Nieuwste eerst</option>
+          <option value="oud">Oudste eerst</option>
+          <option value="titel">Titel A–Z</option>
+          <option value="afdeling">Per afdeling</option>
+          <option value="type">Per type</option>
+        </select>
+      </div>
+
+      <div id="wachtrij" class="melding" hidden></div>
+      <div class="lijst-kop">
+        <p id="aantal" class="muted"></p>
+        <button id="wis-filters" class="link-knop" hidden>Filters wissen</button>
+      </div>
+      <div id="lijst" class="lijst"></div>
+    </section>
+
+    <!-- ============ INSTUREN ============ -->
+    <section id="view-insturen" hidden>
+      <div class="form-kaart">
+        <h2>Iets insturen</h2>
+        <p class="muted">Upload bestanden, deel een link of schrijf een notitie. De AI vat het binnen een paar minuten samen en zet het bij de juiste afdeling. Alle bestanden blijven volledig downloadbaar.</p>
+
+        <form id="form" novalidate>
+          <div class="rij">
+            <label><span class="lbl">Je naam</span>
+              <input name="naam" id="i-naam" required autocomplete="name">
+            </label>
+            <label><span class="lbl">Afdeling</span>
+              <select name="afdeling" id="i-afdeling" required></select>
+            </label>
+          </div>
+
+          <div class="rij">
+            <label><span class="lbl">Titel <span class="opt">(optioneel)</span></span>
+              <input name="titel" placeholder="Laat leeg: de AI bedenkt er een">
+            </label>
+            <label><span class="lbl">Type <span class="opt">(optioneel)</span></span>
+              <select name="type" id="i-type"><option value="">Laat de AI kiezen</option></select>
+            </label>
+          </div>
+
+          <label><span class="lbl">Link <span class="opt">(optioneel)</span></span>
+            <input name="link" type="url" placeholder="https://…">
+          </label>
+
+          <label><span class="lbl">Notitie <span class="opt">(wat is dit en waarom is het belangrijk?)</span></span>
+            <textarea name="notitie" rows="4"></textarea>
+          </label>
+
+          <div id="dropzone" class="dropzone" tabindex="0">
+            <input type="file" id="i-bestanden" multiple hidden>
+            <p><strong>Sleep bestanden hierheen</strong> of <button type="button" class="link-knop" id="kies">kies bestanden</button></p>
+            <p class="muted klein">PDF, Word, PowerPoint, Excel, afbeeldingen, tekst… max <span id="max-mb">50</span> MB per bestand</p>
+            <ul id="bestandlijst" class="bestandlijst"></ul>
+          </div>
+
+          <details id="toegang" class="toegang">
+            <summary>Teamcode <span id="toegang-status" class="muted"></span></summary>
+            <p class="muted klein">Eén keer invullen; je browser onthoudt hem. Vraag de code aan de beheerder van de War Room.</p>
+            <input type="password" id="i-token" autocomplete="off" placeholder="github_pat_…">
+          </details>
+
+          <div class="acties">
+            <button type="submit" class="knop" id="verstuur">Insturen</button>
+            <span id="status" class="status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap voet muted klein">
+    <span id="repo-link"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

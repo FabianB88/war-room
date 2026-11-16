@@ -1,0 +1,21 @@
+{
+  "repo": "FabianB88/war-room",
+  "branch": "main",
+  "naam": "War Room",
+  "challenge": "De revolutie van AI in het onderwijs",
+  "afdelingen": [
+    { "id": "creator-development", "naam": "Creator & Development", "omschrijving": "Maakt tools, prototypes en content." },
+    { "id": "research", "naam": "Research", "omschrijving": "Verzamelt en duidt onderzoek, bronnen en inzichten." },
+    { "id": "centraal", "naam": "Centraal Team", "omschrijving": "Bepaalt de richting, brengt alles samen en maakt de inhoud." }
+  ],
+  "types": [
+    { "id": "onderzoek", "naam": "Onderzoek" },
+    { "id": "bron", "naam": "Bron / artikel" },
+    { "id": "tool", "naam": "Tool / prototype" },
+    { "id": "idee", "naam": "Idee" },
+    { "id": "besluit", "naam": "Besluit" },
+    { "id": "voortgang", "naam": "Voortgang" },
+    { "id": "overig", "naam": "Overig" }
+  ],
+  "max_bestand_mb": 50
+}

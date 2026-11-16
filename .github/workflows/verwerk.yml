@@ -1,0 +1,69 @@
+name: Inzendingen verwerken en site publiceren
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "inbox/**"
+      - "site/**"
+      - "scripts/**"
+      - ".github/workflows/verwerk.yml"
+  workflow_dispatch:
+    inputs:
+      herstel:
+        description: "Items zonder AI-samenvatting alsnog laten samenvatten"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Eén run tegelijk; nieuwe inzendingen wachten netjes op hun beurt.
+concurrency:
+  group: war-room
+  cancel-in-progress: false
+
+jobs:
+  verwerk:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - run: pip install -r scripts/requirements.txt
+
+      - name: Inbox verwerken (samenvatten + sorteren)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/verwerk_inbox.py ${{ inputs.herstel && '--herstel' || '' }}
+
+      - name: Resultaat opslaan in de repo
+        run: |
+          git config user.name "war-room-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Niets nieuws om op te slaan."
+          else
+            git commit -m "Inzendingen verwerkt"
+            # Kwam er tijdens deze run een nieuwe inzending binnen? Eerst bijwerken.
+            git pull --rebase origin main
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
