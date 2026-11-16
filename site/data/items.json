@@ -1,5 +1,44 @@
 [
   {
+    "id": "2026-11-16-124446-61e8",
+    "afdeling": "creator-development",
+    "datum": "2026-11-16T12:44:46+00:00",
+    "verwerkt_op": "2026-11-16T12:45:15+00:00",
+    "ingestuurd_door": "Luna",
+    "notitie": "https://luna-uyt.github.io/ai-docentacademie/#home\nE-learning voor docenten voor basis competenties AI",
+    "link": "https://luna-uyt.github.io/ai-docentacademie/#home",
+    "bestanden": [],
+    "opmerkingen": [],
+    "titel": "Docentacademie: e-learning AI-basiscompetenties voor docenten",
+    "samenvatting": "Dit is een link naar een website (GitHub Pages) genaamd 'Docentacademie — AI in je onderwijs'. Volgens de notitie van Luna is het een e-learning voor docenten over basiscompetenties op het gebied van AI. Van de pagina zelf was alleen de titel en een 'Naar de inhoud'-link leesbaar; modules, leerdoelen, bronnen en doelgroep zijn niet te beoordelen. Het lijkt een eigen prototype van het team, maar dat is niet bevestigd in het materiaal.",
+    "kernpunten": [
+      "Titel van de site: 'Docentacademie — AI in je onderwijs'.",
+      "Volgens de indiener: e-learning voor docenten voor basiscompetenties AI.",
+      "Gehost op GitHub Pages (luna-uyt.github.io), wat wijst op een zelfgebouwd prototype.",
+      "Inhoud, structuur, aantal modules en gebruikte bronnen zijn niet zichtbaar in het aangeleverde materiaal.",
+      "Er zijn geen cijfers, evaluatie of testresultaten bij de inzending."
+    ],
+    "type": "tool",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "docentcompetenties",
+      "onboarding",
+      "professionalisering"
+    ],
+    "relevantie": "Past bij de challenge als concreet product om docenten te professionaliseren in AI-gebruik in het onderwijs. Het Centraal Team kan het als prototype of voorbeeld van een uitwerking gebruiken, zodra de inhoud is bekeken en beoordeeld.",
+    "ook_relevant_voor": [
+      "centraal",
+      "research"
+    ],
+    "brontype": "eigen werk",
+    "betrouwbaarheid": "",
+    "betrouwbaarheid_toelichting": "Het gaat vermoedelijk om eigen werk van het team (ingezonden door Luna, Creator & Development), waarvoor betrouwbaarheid als bronbeoordeling niet van toepassing is.",
+    "onzekerheden": "Alleen de titel van de pagina was leesbaar, dus de daadwerkelijke inhoud, kwaliteit, onderbouwing en doelgroep (bijv. hbo-docenten) zijn onbekend. Open vragen: welke competenties komen aan bod, op welke bronnen is het gebouwd, is het getest met docenten, en is het af of een eerste versie?",
+    "ai": true,
+    "md_pad": "afdelingen/creator-development/2026-11-16-124446-61e8-docentacademie-e-learning-ai-basiscompetenties-voor-docenten.md",
+    "issue": 28
+  },
+  {
     "id": "2026-11-16-123652-2099",
     "afdeling": "creator-development",
     "datum": "2026-11-16T12:36:52+00:00",

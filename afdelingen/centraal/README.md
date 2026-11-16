@@ -13,6 +13,7 @@ _4 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Docentacademie: e-learning AI-basiscompetenties voor docenten](../creator-development/2026-11-16-124446-61e8-docentacademie-e-learning-ai-basiscompetenties-voor-docenten.md)
 - 2026-11-16 - [AI en hbo-leren eind 2026: valkuilen en herontwerp](../creator-development/2026-11-16-123652-2099-ai-en-hbo-leren-eind-2026-valkuilen-en-herontwerp.md)
 - 2026-11-16 - [Valide toetsen van individuele kennis in opdrachtgeversprojecten zonder extra stappen](../research/2026-11-16-123215-b4b4-valide-toetsen-van-individuele-kennis-in-opdrachtgeversproje.md)
 - 2026-11-16 - [AI-beoordeling van opnames: haalbaarheid, bias en regelgeving](../creator-development/2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md)

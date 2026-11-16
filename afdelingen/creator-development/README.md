@@ -2,10 +2,11 @@
 
 Maakt tools, prototypes en content.
 
-_9 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_10 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Docentacademie: e-learning AI-basiscompetenties voor docenten](2026-11-16-124446-61e8-docentacademie-e-learning-ai-basiscompetenties-voor-docenten.md) | Tool / prototype | ai-in-hoger-onderwijs, docentcompetenties, onboarding, professionalisering | Luna |
 | 2026-11-16 | [AI en hbo-leren eind 2026: valkuilen en herontwerp](2026-11-16-123652-2099-ai-en-hbo-leren-eind-2026-valkuilen-en-herontwerp.md) | Onderzoek | ai-in-hoger-onderwijs, arbeidsmarkt, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Fabian |
 | 2026-11-16 | [AI-beoordeling van opnames: haalbaarheid, bias en regelgeving](2026-11-16-122835-47ac-ai-beoordeling-van-opnames-haalbaarheid-bias-en-regelgeving.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, privacy, toetsing | Fabian |
 | 2026-11-16 | [Haalbaarheid en bias-risico's van AI-beoordeling van mondelinge opnames](2026-11-16-122716-b466-haalbaarheid-en-bias-risico-s-van-ai-beoordeling-van-mondeli.md) | Idee | ai-in-hoger-onderwijs, bewijskwaliteit, hbo, privacy, toetsing | Fabian |
