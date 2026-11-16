@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>War Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">WR</span>
+        <div>
+          <h1 id="app-naam">War Room</h1>
+          <p id="challenge" class="muted"></p>
+        </div>
+      </div>
+      <div class="top-rechts">
+        <a class="link-klein" href="./">← Documenten</a>
+        <button id="ververs" class="icoon-knop" title="Verversen" aria-label="Verversen">↻</button>
+        <button id="profiel-knop" class="profiel-knop"></button>
+      </div>
+    </div>
+    <nav class="wrap tabs" role="tablist" aria-label="Onderdelen">
+      <button role="tab" data-view="start">Start</button>
+      <button role="tab" data-view="taken">Taken</button>
+      <button role="tab" data-view="vragen">Vragen <span class="teller" id="teller-vragen" hidden></span></button>
+      <button role="tab" data-view="besluiten">Besluiten</button>
+      <button role="tab" data-view="documenten">Documenten</button>
+      <button role="tab" data-view="richting">Richting &amp; DoD</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div id="melding" class="melding" hidden></div>
+
+    <!-- START -->
+    <section id="view-start" data-view-sectie="start">
+      <div id="richting-banner"></div>
+      <div class="grid-2">
+        <div class="paneel" id="paneel-voortgang"></div>
+        <div class="paneel" id="paneel-eigen"></div>
+      </div>
+      <div class="paneel">
+        <h2 class="paneel-titel">Waar zijn de teams mee bezig?</h2>
+        <div id="teams-bezig" class="teams"></div>
+      </div>
+      <div class="grid-2">
+        <div class="paneel">
+          <div class="paneel-kop"><h2 class="paneel-titel">Open vragen</h2><button class="knop klein-knop" data-nieuw="vraag">+ Vraag stellen</button></div>
+          <div id="open-vragen"></div>
+        </div>
+        <div class="paneel">
+          <h2 class="paneel-titel">Nieuw &amp; recent</h2>
+          <div id="feed" class="feed"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEN -->
+    <section id="view-taken" data-view-sectie="taken" hidden>
+      <div class="balk">
+        <select id="taken-afd" aria-label="Afdeling"><option value="">Alle afdelingen</option></select>
+        <select id="taken-persoon" aria-label="Persoon"><option value="">Iedereen</option></select>
+        <button class="knop" data-nieuw="taak">+ Nieuwe taak</button>
+      </div>
+      <div id="bord" class="bord"></div>
+    </section>
+
+    <!-- VRAGEN -->
+    <section id="view-vragen" data-view-sectie="vragen" hidden>
+      <div class="balk">
+        <select id="vragen-filter" aria-label="Filter">
+          <option value="open">Open vragen</option>
+          <option value="mijn">Open, aan mijn afdeling</option>
+          <option value="alle">Alle vragen</option>
+        </select>
+        <button class="knop" data-nieuw="vraag">+ Vraag stellen</button>
+      </div>
+      <div id="vragen-lijst" class="lijst"></div>
+    </section>
+
+    <!-- BESLUITEN -->
+    <section id="view-besluiten" data-view-sectie="besluiten" hidden>
+      <div class="balk">
+        <p class="muted">Genomen besluiten, nieuwste eerst. Reageren kan per besluit.</p>
+        <button class="knop" data-nieuw="besluit">+ Besluit vastleggen</button>
+      </div>
+      <div id="besluiten-lijst" class="lijst"></div>
+    </section>
+
+    <!-- DOCUMENTEN -->
+    <section id="view-documenten" data-view-sectie="documenten" hidden>
+      <div class="balk">
+        <input type="search" id="zoek" placeholder="Zoek in titels, samenvattingen, tags…" aria-label="Zoeken">
+        <button class="knop" data-nieuw="document">+ Document uploaden</button>
+      </div>
+      <div class="filters">
+        <select id="f-afdeling" aria-label="Afdeling"><option value="">Alle afdelingen</option></select>
+        <select id="f-type" aria-label="Type"><option value="">Alle types</option></select>
+        <select id="f-tag" aria-label="Tag"><option value="">Alle tags</option></select>
+        <select id="f-bron" aria-label="Brontype"><option value="">Alle brontypes</option></select>
+        <select id="sorteer" aria-label="Sorteren">
+          <option value="nieuw">Nieuwste eerst</option>
+          <option value="oud">Oudste eerst</option>
+          <option value="titel">Titel A–Z</option>
+          <option value="afdeling">Per afdeling</option>
+        </select>
+      </div>
+      <div class="lijst-kop"><p id="aantal" class="muted"></p><button id="wis-filters" class="link-knop" hidden>Filters wissen</button></div>
+      <div id="lijst" class="lijst"></div>
+    </section>
+
+    <!-- RICHTING -->
+    <section id="view-richting" data-view-sectie="richting" hidden>
+      <div id="richting-vol"></div>
+    </section>
+  </main>
+
+  <footer class="wrap voet muted klein"><span id="repo-link"></span></footer>
+
+  <!-- Detailpaneel (taak / vraag / besluit / document) -->
+  <dialog id="detail" class="paneel-dialog">
+    <div class="dialog-kop">
+      <div id="detail-meta" class="meta"></div>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <div id="detail-inhoud"></div>
+  </dialog>
+
+  <!-- Formulier: nieuw item -->
+  <dialog id="nieuw" class="paneel-dialog smal">
+    <div class="dialog-kop">
+      <h2 id="nieuw-titel">Nieuw</h2>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <form id="nieuw-form" novalidate></form>
+  </dialog>
+
+  <!-- Profiel / toegang -->
+  <dialog id="profiel" class="paneel-dialog smal">
+    <div class="dialog-kop">
+      <h2>Wie ben je?</h2>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <form id="profiel-form" novalidate>
+      <p class="muted klein">Eén keer invullen op dit apparaat. Je naam en afdeling komen bij alles wat je plaatst.</p>
+      <label><span class="lbl">Je naam</span><input name="naam" required autocomplete="name"></label>
+      <label><span class="lbl">Afdeling</span><select name="afdeling" required></select></label>
+      <label><span class="lbl">Teamcode <span class="opt" id="token-status"></span></span>
+        <input name="token" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+      <p class="muted klein">Vraag de teamcode aan de beheerder. Zonder teamcode kun je alleen documenten bekijken.</p>
+      <div class="acties"><button class="knop" type="submit">Opslaan</button><span class="status" id="profiel-status"></span></div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
