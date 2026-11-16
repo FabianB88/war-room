@@ -16,98 +16,143 @@
           <p id="challenge" class="muted"></p>
         </div>
       </div>
-      <nav class="tabs" role="tablist">
-        <button role="tab" data-view="overzicht" aria-selected="true">Overzicht</button>
-        <button role="tab" data-view="insturen" aria-selected="false">+ Insturen</button>
-      </nav>
+      <div class="top-rechts">
+        <button id="ververs" class="icoon-knop" title="Verversen" aria-label="Verversen">↻</button>
+        <button id="profiel-knop" class="profiel-knop"></button>
+      </div>
     </div>
+    <nav class="wrap tabs" role="tablist" aria-label="Onderdelen">
+      <button role="tab" data-view="start">Start</button>
+      <button role="tab" data-view="taken">Taken</button>
+      <button role="tab" data-view="vragen">Vragen <span class="teller" id="teller-vragen" hidden></span></button>
+      <button role="tab" data-view="besluiten">Besluiten</button>
+      <button role="tab" data-view="documenten">Documenten</button>
+      <button role="tab" data-view="richting">Richting &amp; DoD</button>
+    </nav>
   </header>
 
   <main class="wrap">
-    <!-- ============ OVERZICHT ============ -->
-    <section id="view-overzicht">
-      <div id="afdelingen" class="afd-kaarten"></div>
+    <div id="melding" class="melding" hidden></div>
 
-      <div class="filters">
+    <!-- START -->
+    <section id="view-start" data-view-sectie="start">
+      <div id="richting-banner"></div>
+      <div class="grid-2">
+        <div class="paneel" id="paneel-voortgang"></div>
+        <div class="paneel" id="paneel-eigen"></div>
+      </div>
+      <div class="paneel">
+        <h2 class="paneel-titel">Waar zijn de teams mee bezig?</h2>
+        <div id="teams-bezig" class="teams"></div>
+      </div>
+      <div class="grid-2">
+        <div class="paneel">
+          <div class="paneel-kop"><h2 class="paneel-titel">Open vragen</h2><button class="knop klein-knop" data-nieuw="vraag">+ Vraag stellen</button></div>
+          <div id="open-vragen"></div>
+        </div>
+        <div class="paneel">
+          <h2 class="paneel-titel">Nieuw &amp; recent</h2>
+          <div id="feed" class="feed"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEN -->
+    <section id="view-taken" data-view-sectie="taken" hidden>
+      <div class="balk">
+        <select id="taken-afd" aria-label="Afdeling"><option value="">Alle afdelingen</option></select>
+        <select id="taken-persoon" aria-label="Persoon"><option value="">Iedereen</option></select>
+        <button class="knop" data-nieuw="taak">+ Nieuwe taak</button>
+      </div>
+      <div id="bord" class="bord"></div>
+    </section>
+
+    <!-- VRAGEN -->
+    <section id="view-vragen" data-view-sectie="vragen" hidden>
+      <div class="balk">
+        <select id="vragen-filter" aria-label="Filter">
+          <option value="open">Open vragen</option>
+          <option value="mijn">Open, aan mijn afdeling</option>
+          <option value="alle">Alle vragen</option>
+        </select>
+        <button class="knop" data-nieuw="vraag">+ Vraag stellen</button>
+      </div>
+      <div id="vragen-lijst" class="lijst"></div>
+    </section>
+
+    <!-- BESLUITEN -->
+    <section id="view-besluiten" data-view-sectie="besluiten" hidden>
+      <div class="balk">
+        <p class="muted">Genomen besluiten, nieuwste eerst. Reageren kan per besluit.</p>
+        <button class="knop" data-nieuw="besluit">+ Besluit vastleggen</button>
+      </div>
+      <div id="besluiten-lijst" class="lijst"></div>
+    </section>
+
+    <!-- DOCUMENTEN -->
+    <section id="view-documenten" data-view-sectie="documenten" hidden>
+      <div class="balk">
         <input type="search" id="zoek" placeholder="Zoek in titels, samenvattingen, tags…" aria-label="Zoeken">
+        <button class="knop" data-nieuw="document">+ Document uploaden</button>
+      </div>
+      <div class="filters">
         <select id="f-afdeling" aria-label="Afdeling"><option value="">Alle afdelingen</option></select>
         <select id="f-type" aria-label="Type"><option value="">Alle types</option></select>
         <select id="f-tag" aria-label="Tag"><option value="">Alle tags</option></select>
+        <select id="f-bron" aria-label="Brontype"><option value="">Alle brontypes</option></select>
         <select id="sorteer" aria-label="Sorteren">
           <option value="nieuw">Nieuwste eerst</option>
           <option value="oud">Oudste eerst</option>
           <option value="titel">Titel A–Z</option>
           <option value="afdeling">Per afdeling</option>
-          <option value="type">Per type</option>
         </select>
       </div>
-
-      <div id="wachtrij" class="melding" hidden></div>
-      <div class="lijst-kop">
-        <p id="aantal" class="muted"></p>
-        <button id="wis-filters" class="link-knop" hidden>Filters wissen</button>
-      </div>
+      <div class="lijst-kop"><p id="aantal" class="muted"></p><button id="wis-filters" class="link-knop" hidden>Filters wissen</button></div>
       <div id="lijst" class="lijst"></div>
     </section>
 
-    <!-- ============ INSTUREN ============ -->
-    <section id="view-insturen" hidden>
-      <div class="form-kaart">
-        <h2>Iets insturen</h2>
-        <p class="muted">Upload bestanden, deel een link of schrijf een notitie. De AI vat het binnen een paar minuten samen en zet het bij de juiste afdeling. Alle bestanden blijven volledig downloadbaar.</p>
-
-        <form id="form" novalidate>
-          <div class="rij">
-            <label><span class="lbl">Je naam</span>
-              <input name="naam" id="i-naam" required autocomplete="name">
-            </label>
-            <label><span class="lbl">Afdeling</span>
-              <select name="afdeling" id="i-afdeling" required></select>
-            </label>
-          </div>
-
-          <div class="rij">
-            <label><span class="lbl">Titel <span class="opt">(optioneel)</span></span>
-              <input name="titel" placeholder="Laat leeg: de AI bedenkt er een">
-            </label>
-            <label><span class="lbl">Type <span class="opt">(optioneel)</span></span>
-              <select name="type" id="i-type"><option value="">Laat de AI kiezen</option></select>
-            </label>
-          </div>
-
-          <label><span class="lbl">Link <span class="opt">(optioneel)</span></span>
-            <input name="link" type="url" placeholder="https://…">
-          </label>
-
-          <label><span class="lbl">Notitie <span class="opt">(wat is dit en waarom is het belangrijk?)</span></span>
-            <textarea name="notitie" rows="4"></textarea>
-          </label>
-
-          <div id="dropzone" class="dropzone" tabindex="0">
-            <input type="file" id="i-bestanden" multiple hidden>
-            <p><strong>Sleep bestanden hierheen</strong> of <button type="button" class="link-knop" id="kies">kies bestanden</button></p>
-            <p class="muted klein">PDF, Word, PowerPoint, Excel, afbeeldingen, tekst… max <span id="max-mb">50</span> MB per bestand</p>
-            <ul id="bestandlijst" class="bestandlijst"></ul>
-          </div>
-
-          <details id="toegang" class="toegang">
-            <summary>Teamcode <span id="toegang-status" class="muted"></span></summary>
-            <p class="muted klein">Eén keer invullen; je browser onthoudt hem. Vraag de code aan de beheerder van de War Room.</p>
-            <input type="password" id="i-token" autocomplete="off" placeholder="github_pat_…">
-          </details>
-
-          <div class="acties">
-            <button type="submit" class="knop" id="verstuur">Insturen</button>
-            <span id="status" class="status" role="status" aria-live="polite"></span>
-          </div>
-        </form>
-      </div>
+    <!-- RICHTING -->
+    <section id="view-richting" data-view-sectie="richting" hidden>
+      <div id="richting-vol"></div>
     </section>
   </main>
 
-  <footer class="wrap voet muted klein">
-    <span id="repo-link"></span>
-  </footer>
+  <footer class="wrap voet muted klein"><span id="repo-link"></span></footer>
+
+  <!-- Detailpaneel (taak / vraag / besluit / document) -->
+  <dialog id="detail" class="paneel-dialog">
+    <div class="dialog-kop">
+      <div id="detail-meta" class="meta"></div>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <div id="detail-inhoud"></div>
+  </dialog>
+
+  <!-- Formulier: nieuw item -->
+  <dialog id="nieuw" class="paneel-dialog smal">
+    <div class="dialog-kop">
+      <h2 id="nieuw-titel">Nieuw</h2>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <form id="nieuw-form" novalidate></form>
+  </dialog>
+
+  <!-- Profiel / toegang -->
+  <dialog id="profiel" class="paneel-dialog smal">
+    <div class="dialog-kop">
+      <h2>Wie ben je?</h2>
+      <button class="icoon-knop" data-sluit aria-label="Sluiten">✕</button>
+    </div>
+    <form id="profiel-form" novalidate>
+      <p class="muted klein">Eén keer invullen op dit apparaat. Je naam en afdeling komen bij alles wat je plaatst.</p>
+      <label><span class="lbl">Je naam</span><input name="naam" required autocomplete="name"></label>
+      <label><span class="lbl">Afdeling</span><select name="afdeling" required></select></label>
+      <label><span class="lbl">Teamcode <span class="opt" id="token-status"></span></span>
+        <input name="token" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+      <p class="muted klein">Vraag de teamcode aan de beheerder. Zonder teamcode kun je alleen documenten bekijken.</p>
+      <div class="acties"><button class="knop" type="submit">Opslaan</button><span class="status" id="profiel-status"></span></div>
+    </form>
+  </dialog>
 
   <script src="app.js"></script>
 </body>

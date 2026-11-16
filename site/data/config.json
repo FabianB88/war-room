@@ -17,5 +17,12 @@
     { "id": "voortgang", "naam": "Voortgang" },
     { "id": "overig", "naam": "Overig" }
   ],
+  "statussen": [
+    { "id": "todo", "naam": "Te doen" },
+    { "id": "bezig", "naam": "Bezig" },
+    { "id": "review", "naam": "Ter review" },
+    { "id": "klaar", "naam": "Klaar" }
+  ],
+  "richting_sjabloon": "## Richting\n\nWaar werken we naartoe? Wat is het einddoel van de challenge?\n\n## Definition of Done\n\n- Een taak is klaar als …\n- Onderzoek is klaar als de bron, betrouwbaarheid en onzekerheden zijn vastgelegd\n- …\n\n## Mijlpalen\n\n- …",
   "max_bestand_mb": 50
 }

@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
   pages: write
   id-token: write
 
@@ -31,6 +32,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      # Samenvatten via je Claude-abonnement (maak aan met: claude setup-token). Geen API-kosten.
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      # Optioneel alternatief: betaalde Claude API.
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v5
 
@@ -42,9 +49,11 @@ jobs:
 
       - run: pip install -r scripts/requirements.txt
 
+      - name: Claude Code installeren (alleen als er een abonnements-token is)
+        if: env.CLAUDE_CODE_OAUTH_TOKEN != ''
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Inbox verwerken (samenvatten + sorteren)
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/verwerk_inbox.py ${{ inputs.herstel && '--herstel' || '' }}
 
       - name: Resultaat opslaan in de repo

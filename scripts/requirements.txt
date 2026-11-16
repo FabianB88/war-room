@@ -2,3 +2,4 @@ anthropic
 python-docx
 python-pptx
 openpyxl
+pypdf

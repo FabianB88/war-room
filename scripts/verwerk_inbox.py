@@ -17,7 +17,13 @@ Per inzending:
   3. Er komt een samenvattingspagina in afdelingen/<afdeling>/.
   4. site/data/items.json en de afdelings-overzichten worden bijgewerkt.
 
-Zonder ANTHROPIC_API_KEY werkt alles ook, maar dan zonder AI-samenvatting.
+  5. Er komt een GitHub-issue (label 'document') zodat het team kan reageren;
+     hoort de inzending bij een taak, dan komt de samenvatting als reactie bij die taak.
+
+AI (samenvatten), in deze volgorde:
+  - CLAUDE_CODE_OAUTH_TOKEN  -> Claude Code via je Claude-abonnement (geen API-kosten)
+  - ANTHROPIC_API_KEY        -> Claude API (betaald per gebruik)
+  - geen van beide           -> alles werkt, maar zonder AI-samenvatting
 Met --herstel worden items zonder AI-samenvatting alsnog samengevat.
 """
 from __future__ import annotations
@@ -30,7 +36,9 @@ import os
 import re
 import secrets
 import shutil
+import subprocess
 import sys
+import urllib.error
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -136,6 +144,7 @@ class Bronnen:
 
     def __init__(self):
         self.blokken: list[dict] = []
+        self.platte_tekst: list[tuple[str, str]] = []   # voor Claude Code (alleen tekst)
         self.opmerkingen: list[str] = []
         self._binair = 0
 
@@ -148,6 +157,7 @@ class Bronnen:
             self.opmerkingen.append(
                 f"{titel}: erg lang, alleen de eerste {MAX_TEKENS_PER_BRON // 1000}k tekens zijn samengevat")
             tekst = tekst[:MAX_TEKENS_PER_BRON]
+        self.platte_tekst.append((titel, tekst))
         self.blokken.append({
             "type": "document",
             "source": {"type": "text", "media_type": "text/plain", "data": tekst},
@@ -155,6 +165,14 @@ class Bronnen:
         })
 
     def pdf(self, titel: str, data: bytes) -> None:
+        try:  # tekstversie voor Claude Code
+            import io
+            from pypdf import PdfReader
+            t = "\n".join((p.extract_text() or "") for p in PdfReader(io.BytesIO(data)).pages)
+            if t.strip():
+                self.platte_tekst.append((titel, t[:MAX_TEKENS_PER_BRON]))
+        except Exception:
+            pass
         if len(data) > MAX_PDF_BYTES or self._binair + len(data) > MAX_PDF_TOTAAL:
             self.opmerkingen.append(f"{titel}: te groot om door AI te laten lezen (wel downloadbaar)")
             return
@@ -249,16 +267,23 @@ def lees_link(url: str, bronnen: Bronnen) -> None:
 
 # --------------------------------------------------------------------------- Claude
 
+CLAUDE_CLI = "claude-code-cli"   # marker: samenvatten via Claude Code (abonnement)
+
+
 def maak_client():
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        log("Geen ANTHROPIC_API_KEY gevonden: inzendingen worden verwerkt zonder AI-samenvatting.")
-        return None
-    try:
-        import anthropic
-    except ImportError:
-        log("Python-pakket 'anthropic' ontbreekt: pip install -r scripts/requirements.txt")
-        return None
-    return anthropic.Anthropic()
+    if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN") and shutil.which("claude"):
+        log("AI: Claude Code via abonnement (geen API-kosten).")
+        return CLAUDE_CLI
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        try:
+            import anthropic
+        except ImportError:
+            log("Python-pakket 'anthropic' ontbreekt: pip install -r scripts/requirements.txt")
+            return None
+        log("AI: Claude API (betaald per gebruik).")
+        return anthropic.Anthropic()
+    log("Geen AI-toegang ingesteld: inzendingen worden verwerkt zonder AI-samenvatting.")
+    return None
 
 
 def systeemprompt(cfg: dict) -> str:
@@ -278,7 +303,8 @@ def schema(cfg: dict) -> dict:
     return {
         "type": "object",
         "additionalProperties": False,
-        "required": ["titel", "samenvatting", "kernpunten", "type", "tags", "relevantie", "ook_relevant_voor"],
+        "required": ["titel", "samenvatting", "kernpunten", "type", "tags", "relevantie", "ook_relevant_voor",
+                     "brontype", "betrouwbaarheid", "betrouwbaarheid_toelichting", "onzekerheden"],
         "properties": {
             "titel": {"type": "string", "description": "Korte, beschrijvende titel (max ~10 woorden)."},
             "samenvatting": {"type": "string", "description": "3 tot 6 zinnen: wat is het en wat is de kern."},
@@ -291,8 +317,45 @@ def schema(cfg: dict) -> dict:
                            "description": "1 tot 3 zinnen: wat betekent dit voor de challenge en wat kan het team ermee?"},
             "ook_relevant_voor": {"type": "array", "items": {"type": "string", "enum": [a["id"] for a in cfg["afdelingen"]]},
                                   "description": "Andere afdelingen die dit zeker moeten zien (mag leeg)."},
+            "brontype": {"type": "string", "enum": BRONTYPES,
+                         "description": "Soort bron; 'eigen werk' voor werk van het team zelf."},
+            "betrouwbaarheid": {"type": "string", "enum": ["hoog", "middel", "laag", "n.v.t."]},
+            "betrouwbaarheid_toelichting": {"type": "string",
+                                            "description": "1 zin: onderbouwing, onafhankelijkheid (wie financiert/belang?)."},
+            "onzekerheden": {"type": "string",
+                             "description": "Betwiste claims, beperkingen of open vragen; leeg als er geen zijn."},
         },
     }
+
+
+BRONTYPES = ["wetenschappelijk onderzoek", "institutioneel rapport", "expertstandpunt", "nieuws/journalistiek",
+             "beleid/overheid", "commercieel/leverancier", "eigen werk", "overig"]
+
+
+def _prompt_tekst(cfg: dict, instructie: str, bronnen: Bronnen) -> str:
+    delen = [systeemprompt(cfg), ""]
+    for titel, tekst in bronnen.platte_tekst:
+        delen += [f'<document titel="{titel}">', tekst, "</document>", ""]
+    delen += [instructie, "",
+              "Antwoord met ALLEEN één JSON-object (geen uitleg, geen codeblok) dat precies aan dit schema voldoet:",
+              json.dumps(schema(cfg), ensure_ascii=False)]
+    return "\n".join(delen)
+
+
+def vat_samen_cli(cfg: dict, instructie: str, bronnen: Bronnen) -> dict:
+    prompt = _prompt_tekst(cfg, instructie, bronnen)
+    r = subprocess.run(["claude", "-p", "--output-format", "json"], input=prompt, capture_output=True,
+                       text=True, encoding="utf-8", timeout=600)
+    if r.returncode != 0:
+        raise AIFout(f"Claude Code faalde: {(r.stderr or r.stdout)[-300:]}")
+    uit = json.loads(r.stdout)
+    if uit.get("is_error"):
+        raise AIFout(f"Claude Code: {str(uit.get('result'))[:300]}")
+    tekst = str(uit.get("result", ""))
+    m = re.search(r"\{.*\}", tekst, re.S)
+    if not m:
+        raise AIFout("Claude Code gaf geen JSON terug")
+    return json.loads(m.group(0))
 
 
 class AIFout(Exception):
@@ -312,7 +375,10 @@ def vat_samen(client, cfg: dict, meta: dict, bronnen: Bronnen, bestaande_tags: l
          + ", ".join(bestaande_tags[:80])) if bestaande_tags else "",
         "Vat deze inzending samen volgens het schema.",
     ]
-    content = bronnen.blokken + [{"type": "text", "text": "\n\n".join(r for r in instructie if r)}]
+    instructie_tekst = "\n\n".join(r for r in instructie if r)
+    if client == CLAUDE_CLI:
+        return vat_samen_cli(cfg, instructie_tekst, bronnen)
+    content = bronnen.blokken + [{"type": "text", "text": instructie_tekst}]
 
     resp = client.beta.messages.create(
         model=MODEL,
@@ -391,6 +457,12 @@ def item_markdown(item: dict, cfg: dict) -> str:
         r += ["", "## Kernpunten", ""] + [f"- {k}" for k in item["kernpunten"]]
     if item.get("relevantie"):
         r += ["", "## Wat betekent dit voor de challenge?", "", item["relevantie"]]
+    if item.get("brontype") or item.get("betrouwbaarheid"):
+        r += ["", "## Bron", "", f"**Soort:** {item.get('brontype') or '-'} · **Betrouwbaarheid:** {item.get('betrouwbaarheid') or '-'}"]
+        if item.get("betrouwbaarheid_toelichting"):
+            r += ["", item["betrouwbaarheid_toelichting"]]
+    if item.get("onzekerheden"):
+        r += ["", "## Onzekerheden en betwiste punten", "", item["onzekerheden"]]
     if item.get("bestanden"):
         r += ["", "## Bestanden", ""]
         for b in item["bestanden"]:
@@ -404,6 +476,87 @@ def item_markdown(item: dict, cfg: dict) -> str:
     if not item.get("ai"):
         r += ["", "_Nog geen AI-samenvatting. Draai de workflow met 'herstel' aan om dit alsnog te doen._"]
     return "\n".join(r) + "\n"
+
+
+# --------------------------------------------------------------------------- GitHub-issues (reageren/koppelen)
+
+def gh_api(method: str, pad: str, data=None):
+    token, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+    if not token or not repo:
+        return None
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}{pad}", method=method,
+        data=json.dumps(data).encode("utf-8") if data is not None else None,
+        headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
+                 "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read() or b"null")
+    except urllib.error.HTTPError as e:
+        log(f"  GitHub API {method} {pad} faalde: {e.code} {e.read()[:200]!r}")
+    except Exception as e:
+        log(f"  GitHub API {method} {pad} faalde: {e}")
+    return None
+
+
+def site_url() -> str:
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if "/" not in repo:
+        return ""
+    eigenaar, naam = repo.split("/", 1)
+    return f"https://{eigenaar.lower()}.github.io/{naam}/"
+
+
+def marker(data: dict) -> str:
+    return "<!-- warroom:" + json.dumps(data, ensure_ascii=False).replace("--", "-\\u002d") + " -->"
+
+
+def issue_tekst(item: dict, cfg: dict, kop: str = "") -> str:
+    afd = {a["id"]: a["naam"] for a in cfg["afdelingen"]}
+    basis = site_url()
+    r = [kop] if kop else []
+    r.append(f"**{afd.get(item['afdeling'], item['afdeling'])}** · ingestuurd door {item.get('ingestuurd_door') or 'onbekend'}")
+    if item.get("samenvatting"):
+        r += ["", item["samenvatting"]]
+    if item.get("kernpunten"):
+        r += [""] + [f"- {k}" for k in item["kernpunten"]]
+    if item.get("relevantie"):
+        r += ["", f"**Betekenis voor de challenge:** {item['relevantie']}"]
+    if item.get("brontype") or item.get("betrouwbaarheid"):
+        r += ["", f"**Bron:** {item.get('brontype') or '-'} · betrouwbaarheid {item.get('betrouwbaarheid') or '-'}"
+              + (f": {item['betrouwbaarheid_toelichting']}" if item.get("betrouwbaarheid_toelichting") else "")]
+    if item.get("onzekerheden"):
+        r += ["", f"**Onzekerheden:** {item['onzekerheden']}"]
+    if item.get("bestanden"):
+        r += ["", "**Downloads:**"] + [
+            f"- [{b['naam']}]({basis}{urllib.request.quote(b['pad'])}) ({max(1, b['grootte'] // 1024)} kB)" for b in item["bestanden"]]
+    if item.get("link"):
+        r += ["", f"**Link:** {item['link']}"]
+    if not item.get("ai"):
+        r += ["", "_Nog geen AI-samenvatting._"]
+    r += ["", "_Samenvatting gemaakt door AI: controleer hem en markeer als gecontroleerd._" if item.get("ai") else ""]
+    r.append(marker({"soort": "document", "item": item["id"], "auteur": item.get("ingestuurd_door", ""),
+                     "afdeling": item["afdeling"]}))
+    return "\n".join(r)
+
+
+def koppel_github(item: dict, cfg: dict, taak) -> None:
+    if not item.get("issue"):
+        res = gh_api("POST", "/issues", {"title": f"📄 {item['titel']}"[:250], "body": issue_tekst(item, cfg),
+                                         "labels": ["document", f"afd:{item['afdeling']}"]})
+        if res:
+            item["issue"] = res["number"]
+    else:
+        gh_api("PATCH", f"/issues/{item['issue']}", {"title": f"📄 {item['titel']}"[:250], "body": issue_tekst(item, cfg)})
+    try:
+        taak = int(taak) if taak else None
+    except (TypeError, ValueError):
+        taak = None
+    if taak:
+        item["taak"] = taak
+        kop = f"📄 **Samenvatting bijgevoegde documenten: {item['titel']}**" + (f" (#{item['issue']})" if item.get("issue") else "")
+        gh_api("POST", f"/issues/{taak}/comments", {"body": issue_tekst(item, cfg, kop).replace(
+            '"soort": "document"', '"soort": "samenvatting"')})
 
 
 def schrijf_overzichten(items: list[dict], cfg: dict) -> None:
@@ -437,6 +590,10 @@ def pas_ai_toe(item: dict, res: dict, cfg: dict, ai: bool) -> None:
     item["tags"] = sorted({t.strip().lower() for t in res.get("tags", []) if t.strip()})
     item["relevantie"] = res.get("relevantie", "").strip()
     item["ook_relevant_voor"] = [a for a in res.get("ook_relevant_voor", []) if a in afd_ids and a != item["afdeling"]]
+    item["brontype"] = res.get("brontype") if res.get("brontype") in BRONTYPES else ""
+    item["betrouwbaarheid"] = res.get("betrouwbaarheid") if res.get("betrouwbaarheid") in ("hoog", "middel", "laag") else ""
+    item["betrouwbaarheid_toelichting"] = (res.get("betrouwbaarheid_toelichting") or "").strip()
+    item["onzekerheden"] = (res.get("onzekerheden") or "").strip()
     item["ai"] = ai
     if not ai and res.get("_reden"):
         item["ai_fout"] = res["_reden"]
@@ -503,6 +660,7 @@ def verwerk(cfg: dict, items: list[dict], client) -> int:
         md.parent.mkdir(parents=True, exist_ok=True)
         item["md_pad"] = md.relative_to(ROOT).as_posix()
         md.write_text(item_markdown(item, cfg), encoding="utf-8")
+        koppel_github(item, cfg, meta.get("taak"))
         items.append(item)
 
         for p in opruimen:
@@ -538,6 +696,7 @@ def herstel(cfg: dict, items: list[dict], client) -> int:
             oud_md.unlink()
         item["md_pad"] = md.relative_to(ROOT).as_posix()
         md.write_text(item_markdown(item, cfg), encoding="utf-8")
+        koppel_github(item, cfg, None)
         n += 1
     return n
 

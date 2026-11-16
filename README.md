@@ -1,80 +1,62 @@
 # War Room ™ (pending)
 
-Eén plek waar alle kennis van de War Room samenkomt. Challenge: **de revolutie van AI in het onderwijs**.
+De gedeelde projecttool voor de challenge **de revolutie van AI in het onderwijs**: 10 studenten, 3 docenten en 3 afdelingen (Centraal Team, Research, Creator & Development).
 
-- **Insturen** gaat direct op de site: een bestand slepen, een link plakken of een notitie typen.
-- **AI vat het samen**: titel, samenvatting, kernpunten, type, tags en wat het betekent voor de challenge.
-- **Gesorteerd per afdeling**: Creator & Development, Research en het Centraal Team.
-- **Doorzoekbaar en filterbaar** op afdeling, type, tag en datum.
-- **Alle bestanden blijven volledig downloadbaar**, zowel op de site als in de repo.
+**Site:** https://fabianb88.github.io/war-room/
+
+## Wat kan het?
+
+| Onderdeel | Wat |
+|---|---|
+| **Start** | Projectrichting en DoD, totale voortgang, voortgang van je eigen afdeling, waar elk team mee bezig is, open vragen, en nieuw sinds je vorige bezoek |
+| **Taken** | Bord met de kolommen *Te doen → Bezig → Ter review → Klaar*. Elke taak heeft een verantwoordelijke, afdeling en deadline. Je plaatst voortgangsupdates met documenten, en anderen kunnen reageren. Bij *Klaar* vraagt de tool of de taak aan de DoD voldoet. |
+| **Vragen** | Vragen aan een afdeling. Ze staan open tot iemand ze als beantwoord markeert. |
+| **Besluiten** | Genomen besluiten met onderbouwing en datum |
+| **Documenten** | Echte uploads, volledig downloadbaar. De AI maakt een samenvatting, kernpunten, tags, het brontype, de betrouwbaarheid en de onzekerheden. Een teamlid kan de samenvatting als *gecontroleerd* markeren. |
+| **Richting & DoD** | Het Centraal Team legt richting, definition of done en mijlpalen vast. Elke wijziging komt in de geschiedenis. |
+
+Alles is terug te volgen: elke taak, vraag en besluit is een GitHub-issue met een volledige tijdlijn.
 
 ## Hoe het werkt
 
+- **Taken, vragen, besluiten, richting en reacties** zijn GitHub Issues in deze repo. Ze zijn direct zichtbaar voor iedereen.
+- **Uploads** komen via de site in `inbox/`. Een GitHub Action leest ze, laat de AI ze samenvatten en zet ze in `site/bestanden/<afdeling>/`. Ook komt er een document-issue om op te reageren. Hoort een upload bij een taak, dan komt de samenvatting als reactie bij die taak. Dit duurt ongeveer 1 à 2 minuten.
+- **De AI** draait via **Claude Code op je Claude-abonnement**, dus zonder API-kosten. Zonder AI-token werkt alles ook, alleen zonder samenvattingen.
+
+## Opzetten (beheerder, eenmalig)
+
+De repo, de labels en de site zijn al aangemaakt. Er zijn nog twee stappen.
+
+### 1. Teamcode maken (± 3 min)
+Ga naar https://github.com/settings/personal-access-tokens/new:
+- *Token name*: `war-room-team`. *Expiration*: einde van de challenge.
+- *Repository access*: **Only select repositories**, en kies dan `FabianB88/war-room`.
+- *Permissions → Repository permissions*:
+  - **Contents**: Read and write
+  - **Issues**: Read and write
+
+Deel deze code **alleen privé** met de 13 deelnemers, bijvoorbeeld in de Teams-chat. Iedereen vult hem één keer in onder *Wie ben je?*. Lekt de code toch uit, trek hem dan in en maak een nieuwe.
+
+> Alles wordt op GitHub geplaatst onder het account van de beheerder. Wie iets plaatste, staat in de tool zelf, want iedereen vult zijn naam in. Echte inlog per persoon kan later nog.
+
+### 2. AI-samenvattingen aanzetten via je abonnement (± 2 min)
+In een terminal (Node.js nodig):
+```bash
+npx @anthropic-ai/claude-code setup-token
 ```
- Site (GitHub Pages)            GitHub-repo                         GitHub Action
- ───────────────────            ───────────                         ─────────────
- Formulier "Insturen"  ──────►  inbox/<id>/meta.json + bestanden ─► scripts/verwerk_inbox.py
-                                                                     • leest PDF/Word/PPT/Excel/
-                                                                       afbeeldingen/tekst + link
-                                                                     • Claude vat samen + sorteert
- Overzicht + downloads ◄──────  site/data/items.json             ◄── • bestanden → site/bestanden/<afdeling>/
-                                site/bestanden/<afdeling>/…          • samenvatting → afdelingen/<afdeling>/
-                                afdelingen/<afdeling>/*.md           • site opnieuw gepubliceerd
+Log in met je Claude-account en kopieer de token die verschijnt. Zet hem daarna als secret in de repo:
+```bash
+gh secret set CLAUDE_CODE_OAUTH_TOKEN -R FabianB88/war-room
 ```
-
-Een inzending staat 1 à 2 minuten na het insturen op de site.
-
-## Mappen
-
-| Map | Wat staat er |
-|---|---|
-| `site/` | De website (overzicht + insturen) |
-| `site/data/config.json` | Afdelingen, types, challenge-naam: **hier pas je dingen aan** |
-| `site/data/items.json` | Alle verwerkte inzendingen (wordt automatisch bijgewerkt) |
-| `site/bestanden/<afdeling>/<id>/` | De originele bestanden, volledig downloadbaar |
-| `afdelingen/<afdeling>/` | Per inzending een samenvattingspagina + `README.md` overzicht per afdeling |
-| `inbox/` | Wachtrij; wordt automatisch leeggemaakt |
-| `scripts/verwerk_inbox.py` | Het verwerkscript |
-
-## Eenmalig opzetten (± 15 minuten)
-
-1. **Repo aanmaken.** Maak op GitHub een nieuwe repository, bijvoorbeeld `war-room`, en zet de inhoud van deze map erin:
-   ```bash
-   git init && git add -A && git commit -m "War Room" && git branch -M main
-   git remote add origin https://github.com/<jouw-naam>/war-room.git && git push -u origin main
-   ```
-   *Openbaar of privé?* Bij een openbare repo is alles (ook de bestanden) voor iedereen te zien. Een privé-repo met een site werkt alleen met GitHub Pro. Studenten krijgen Pro gratis via het [GitHub Student Developer Pack](https://education.github.com/pack).
-
-2. **Pages aanzetten.** Ga in de repo naar *Settings → Pages* en kies bij *Source* de optie **GitHub Actions**.
-
-3. **AI-sleutel toevoegen.** Maak een API-sleutel aan op [console.anthropic.com](https://console.anthropic.com). Ga daarna naar *Settings → Secrets and variables → Actions → New repository secret*, met naam `ANTHROPIC_API_KEY` en als waarde de sleutel.
-   Zonder sleutel werkt alles ook, maar dan zonder samenvatting.
-
-4. **Teamcode maken.** Dit is de sleutel waarmee de site in de repo mag schrijven.
-   *GitHub → je profiel → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token*:
-   - *Repository access*: **Only select repositories**, en kies dan alleen `war-room`.
-   - *Permissions → Repository permissions → Contents*: **Read and write**.
-   - Kies een vervaldatum, bijvoorbeeld het einde van de challenge.
-
-   Deel deze code **alleen privé** met het team, bijvoorbeeld in Teams of WhatsApp, en zet hem nooit in de repo. Iedereen vult hem één keer in onder *Insturen → Teamcode*. Wie de code heeft, kan alleen in deze ene repo schrijven. Lekt de code toch uit, trek hem dan in en maak een nieuwe.
-
-5. **Eerste run.** Ga naar *Actions → "Inzendingen verwerken en site publiceren" → Run workflow*. Daarna staat de site op
-   `https://<jouw-naam>.github.io/war-room/`.
+Plak daar de token. Dit vereist een Claude Pro- of Max-abonnement. Liever de betaalde API gebruiken? Zet dan in plaats daarvan het secret `ANTHROPIC_API_KEY`.
 
 ## Dagelijks gebruik
+- **Mislukte samenvatting** (label "nog niet samengevat"): ga naar *Actions → Run workflow* en vink **herstel** aan.
+- **Afdelingen, types of statussen aanpassen:** doe dat in `site/data/config.json`.
+- **Alles lokaal hebben:** `git pull`.
 
-- **Insturen:** op de site, via *+ Insturen*. Naam en afdeling zijn verplicht, de rest mag. Je kunt meerdere bestanden tegelijk sturen, of een screenshot plakken met Ctrl+V.
-- **Via GitHub zelf:** zet een bestand in `inbox/research/`, `inbox/creator-development/` of `inbox/centraal/`. Elk bestand wordt een eigen inzending.
-- **Mislukte samenvatting** (rood label "nog niet samengevat"): ga naar *Actions → Run workflow* en vink **herstel** aan.
-- **Alles lokaal hebben:** met `git pull` staat alles, inclusief bestanden, ook op je eigen pc.
-- **Afdelingen of types aanpassen:** bewerk `site/data/config.json`. Geef een nieuwe afdeling een kleur in `site/style.css` (`--afd-<id>`).
-
-## Kosten
-
-Het samenvatten gebeurt met Claude Opus 5.5. Een notitie of link kost ongeveer € 0,01, een PDF van 20 pagina's zo'n € 0,10 à € 0,20. GitHub zelf is gratis, met wel een limiet van ongeveer 1 GB voor de site. Grote video's kun je dus beter als link delen.
-
-## Grenzen
-
-- Max 50 MB per bestand (instelbaar in `config.json`; GitHub accepteert tot 100 MB).
-- De AI leest PDF's tot 20 MB en afbeeldingen tot 5 MB. Grotere bestanden zijn wel downloadbaar, maar worden alleen op basis van de notitie samengevat. Dat staat er dan bij.
-- Een link wordt alleen gelezen als de pagina zonder inloggen te openen is.
+## Grenzen (v1)
+- Max 50 MB per bestand. De AI leest PDF, Word, PowerPoint, Excel en tekstbestanden, en de pagina achter een link (als die openbaar is).
+- De repo is **openbaar**: alle uploads zijn voor iedereen met de link te zien. Upload dus geen privacygevoelige stukken.
+- Voortgang = het aandeel taken met status *Klaar* (voorlopig, zoals afgesproken).
+- Nog niet besloten en dus nog niet gebouwd: echte inlog per persoon, beheerrechten, meldingen en het goedkeuren van werk door een ander.
