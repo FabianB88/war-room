@@ -6,7 +6,7 @@ _2 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
-| 2026-11-16 | [Softskills en life skills per onderwijsrichting: onderzoeksoverzicht](2026-11-16-122505-211e-softskills-en-life-skills-per-onderwijsrichting-onderzoeksov.md) | Onderzoek | arbeidsmarkt, bewijskwaliteit, hbo, professionalisering, softskills | Jibbe |
+| 2026-11-16 | [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md) | Overig | ai-in-hoger-onderwijs, cognitive-offloading, docentcompetenties, hbo, softskills, toetsing | Fien |
 | 2026-11-16 | [Welkom bij de War Room: uitleg documenten delen](2026-11-16-110711-9fcc-welkom-bij-de-war-room-uitleg-documenten-delen.md) | Overig | documenten-delen, onboarding, privacy, werkwijze |  |
 
 ## Ook relevant voor deze afdeling

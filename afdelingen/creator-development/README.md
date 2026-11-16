@@ -14,7 +14,7 @@ _5 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
-- 2026-11-16 - [Softskills en life skills per onderwijsrichting: onderzoeksoverzicht](../centraal/2026-11-16-122505-211e-softskills-en-life-skills-per-onderwijsrichting-onderzoeksov.md)
+- 2026-11-16 - [Brandbrief aan OCW: herinrichting hbo in een wereld met AI](../centraal/2026-11-16-122650-ff47-brandbrief-aan-ocw-herinrichting-hbo-in-een-wereld-met-ai.md)
 - 2026-11-16 - [Eerst zelf kunnen, dan AI: basisvaardigheden hbo-studenten](../research/2026-11-16-120234-46a2-eerst-zelf-kunnen-dan-ai-basisvaardigheden-hbo-studenten.md)
 - 2026-11-16 - [Aanbevelingen AI-gebruik bij softskills: bewijs en advies](../research/2026-11-16-115801-2dfe-aanbevelingen-ai-gebruik-bij-softskills-bewijs-en-advies.md)
 - 2026-11-16 - [Minimale eisen voor een hbo-bachelordiploma in Nederland](../research/2026-11-16-114454-8b55-minimale-eisen-voor-een-hbo-bachelordiploma-in-nederland.md)
