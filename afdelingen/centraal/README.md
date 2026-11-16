@@ -10,6 +10,7 @@ _1 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 ## Ook relevant voor deze afdeling
 
+- 2026-11-16 - [Light research: AI-gebruik studenten en persoonlijke ontwikkeling](../research/2026-11-16-114109-327f-light-research-ai-gebruik-studenten-en-persoonlijke-ontwikke.md)
 - 2026-11-16 - [Leervormen in het hbo en kwetsbaarheden door generatieve AI](../research/2026-11-16-113959-559b-leervormen-in-het-hbo-en-kwetsbaarheden-door-generatieve-ai.md)
 - 2026-11-16 - [Controleerbaarheid van softskills-leren in het hbo bij AI-gebruik](../research/2026-11-16-113849-4272-controleerbaarheid-van-softskills-leren-in-het-hbo-bij-ai-ge.md)
 - 2026-11-16 - [Minimale AI-competenties en basisprogramma voor hbo-docenten](../creator-development/2026-11-16-112501-7898-minimale-ai-competenties-en-basisprogramma-voor-hbo-docenten.md)

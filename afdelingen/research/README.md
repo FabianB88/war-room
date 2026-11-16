@@ -2,10 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_2 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_3 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-16 | [Light research: AI-gebruik studenten en persoonlijke ontwikkeling](2026-11-16-114109-327f-light-research-ai-gebruik-studenten-en-persoonlijke-ontwikke.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Amin |
 | 2026-11-16 | [Leervormen in het hbo en kwetsbaarheden door generatieve AI](2026-11-16-113959-559b-leervormen-in-het-hbo-en-kwetsbaarheden-door-generatieve-ai.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, cognitive-offloading, hbo, toetsing | Pepijn |
 | 2026-11-16 | [Controleerbaarheid van softskills-leren in het hbo bij AI-gebruik](2026-11-16-113849-4272-controleerbaarheid-van-softskills-leren-in-het-hbo-bij-ai-ge.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, docentcompetenties, hbo, toetsing | Pepijn |
 
