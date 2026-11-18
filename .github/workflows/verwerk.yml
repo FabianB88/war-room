@@ -32,31 +32,41 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-    env:
-      # Samenvatten via je Claude-abonnement (maak aan met: claude setup-token). Geen API-kosten.
-      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-      # Optioneel alternatief: betaalde Claude API.
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v5
         with:
           ref: main   # altijd de nieuwste versie, ook als deze run in de wachtrij stond
 
+      # VEILIGHEID: de teamcode mag bestanden in de repo aanpassen, maar niet dit workflowbestand.
+      # Daarom staat hier de vingerafdruk van de code die met de geheimen draait. Is het script
+      # aangepast (door wie dan ook), dan stopt de run en ziet die code de Claude-token nooit.
+      # Script bewust gewijzigd? Werk dan de hashes hieronder bij:
+      #   git show :scripts/verwerk_inbox.py | sha256sum
+      - name: Vingerafdruk van het verwerkscript controleren
+        run: |
+          cat > /tmp/vertrouwd.sha256 <<'EOF'
+          7bc292cfd713ebf28b5119f137ade4128572989049363ec732b616b551d1514a  scripts/verwerk_inbox.py
+          53f9702d7ef7f510c377b6f03757e681996791ba533595a5baee3fb420280e0f  scripts/requirements.txt
+          EOF
+          sha256sum -c /tmp/vertrouwd.sha256
+
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: scripts/requirements.txt
 
       - run: pip install -r scripts/requirements.txt
 
-      - name: Claude Code installeren (alleen als er een abonnements-token is)
-        if: env.CLAUDE_CODE_OAUTH_TOKEN != ''
+      - name: Claude Code installeren
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Inbox verwerken (samenvatten + sorteren)
-        run: python scripts/verwerk_inbox.py ${{ inputs.herstel && '--herstel' || '' }}
+        # De geheimen zijn ALLEEN in deze stap beschikbaar, niet tijdens het installeren.
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # -I: Python laadt geen modules uit de repo-map (geen nep-'json.py' e.d.)
+        run: python -I scripts/verwerk_inbox.py ${{ inputs.herstel && '--herstel' || '' }}
 
       - name: Resultaat opslaan in de repo
         run: |

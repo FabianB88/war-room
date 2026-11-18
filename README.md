@@ -60,3 +60,9 @@ Plak daar de token. Dit vereist een Claude Pro- of Max-abonnement. Liever de bet
 - De repo is **openbaar**: alle uploads zijn voor iedereen met de link te zien. Upload dus geen privacygevoelige stukken.
 - Voortgang = het aandeel taken met status *Klaar* (voorlopig, zoals afgesproken).
 - Nog niet besloten en dus nog niet gebouwd: echte inlog per persoon, beheerrechten, meldingen en het goedkeuren van werk door een ander.
+
+## Veiligheid
+- De AI krijgt **geen gereedschap**: hij kan alleen de tekst lezen die het script hem geeft. Hij draait in een lege map, zonder andere geheimen in de buurt. Instructies in documenten worden genegeerd en gemeld.
+- De workflow controleert eerst een **vingerafdruk** van `scripts/verwerk_inbox.py` en `scripts/requirements.txt`. Is één van beide aangepast, dan stopt de run voordat de Claude-token beschikbaar is. De teamcode kan de workflow zelf niet wijzigen, want daarvoor mist hij het recht *Workflows*.
+- **Script bewust aangepast?** Werk dan de hashes in `.github/workflows/verwerk.yml` bij met `git show :scripts/verwerk_inbox.py | sha256sum` (en hetzelfde voor `requirements.txt`). Doe dat met je eigen GitHub-login, niet met de teamcode.
+- **Teamcode gelekt?** Trek hem in op https://github.com/settings/personal-access-tokens en maak een nieuwe. Je Claude-token trek je in via je Claude-account. Maak daarna een nieuwe met `claude setup-token`.
