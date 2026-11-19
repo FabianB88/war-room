@@ -1,5 +1,44 @@
 [
   {
+    "id": "2026-11-19-123841-7a86",
+    "afdeling": "research",
+    "datum": "2026-11-19T12:38:41+00:00",
+    "verwerkt_op": "2026-11-19T12:39:07+00:00",
+    "ingestuurd_door": "Jens Varwijk",
+    "notitie": "",
+    "link": "https://maik-stgmn.github.io/ai-onderzoeksacademie/",
+    "bestanden": [],
+    "opmerkingen": [],
+    "titel": "AI Onderzoeksacademie: zelfstudiecursus in 7 lessen",
+    "samenvatting": "Dit is een link naar een zelfstandige online cursus, 'AI Onderzoeksacademie' (lessenreeks versie 3.0), over AI en wetenschappelijk onderzoek. De cursus bestaat uit 7 lessen, waarin met één fictieve casus wordt geoefend. Antwoorden blijven lokaal op het apparaat van de gebruiker en er is geen eigen onderzoeksproject nodig. Van de pagina is alleen de kop- en introductietekst beschikbaar; de inhoud van de lessen, de auteurs en de bronnen erachter zijn niet zichtbaar, dus de inhoudelijke kwaliteit is niet te beoordelen. Er is geen notitie van de indiener meegegeven over waarom deze link relevant is.",
+    "kernpunten": [
+      "Zelfstandige cursus van 7 lessen, voortgangsteller '0 van 7 afgerond'.",
+      "Oefent met één fictieve casus; geen eigen onderzoeksproject nodig.",
+      "Antwoorden worden lokaal op het apparaat bewaard (geen vermelding van server-opslag).",
+      "Gepresenteerd door 'Ontwerpteam · AI en wetenschappelijk onderzoek', lessenreeks versie 3.0.",
+      "Gehost op een persoonlijke GitHub Pages-site (maik-stgmn.github.io); geen institutionele herkomst zichtbaar.",
+      "Lesinhoud, doelgroep, leerdoelen en bronnen zijn niet beschikbaar in het ingezonden materiaal."
+    ],
+    "type": "bron",
+    "tags": [
+      "ai-in-hoger-onderwijs",
+      "onboarding",
+      "professionalisering",
+      "werkwijze"
+    ],
+    "relevantie": "Mogelijk bruikbaar als leermiddel of voorbeeld van een AI-onderwijsproduct voor onderzoeksvaardigheden, en als inspiratie voor hoe een zelfstudiecursus is opgebouwd. Zonder lesinhoud kan het team nog niet bepalen of het inhoudelijk nuttig is; iemand moet de lessen doorlopen.",
+    "ook_relevant_voor": [
+      "creator-development"
+    ],
+    "brontype": "overig",
+    "betrouwbaarheid": "laag",
+    "betrouwbaarheid_toelichting": "Alleen een landingspagina op een persoonlijke GitHub Pages-site zonder zichtbare auteurs, instelling, financiering of bronvermelding.",
+    "onzekerheden": "Inhoud van de 7 lessen niet gelezen; onbekend wie het 'Ontwerpteam' is, wat de doelgroep is en of de cursus wetenschappelijk onderbouwd of getest is. Geen notitie van Jens over het beoogde gebruik. Het document bevat geen instructies aan de AI.",
+    "ai": true,
+    "md_pad": "afdelingen/research/2026-11-19-123841-7a86-ai-onderzoeksacademie-zelfstudiecursus-in-7-lessen.md",
+    "issue": 35
+  },
+  {
     "id": "2026-11-19-121559-9b81",
     "afdeling": "research",
     "datum": "2026-11-19T12:15:59+00:00",
