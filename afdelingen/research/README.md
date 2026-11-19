@@ -2,10 +2,11 @@
 
 Verzamelt en duidt onderzoek, bronnen en inzichten.
 
-_13 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
+_14 inzending(en). Dit overzicht wordt automatisch bijgewerkt._
 
 | Datum | Titel | Type | Tags | Door |
 |---|---|---|---|---|
+| 2026-11-19 | [Klein Nederlands taalmodel voor hoger onderwijs: kernsamenvatting rapport](2026-11-19-121559-9b81-klein-nederlands-taalmodel-voor-hoger-onderwijs-kernsamenvat.md) | Onderzoek | ai-in-hoger-onderwijs, haalbaarheid, hbo, privacy, studiebegeleiding, toetsing | Amin |
 | 2026-11-16 | [Soevereine AI voor beoordeling van softskills-voortgangsgesprekken in hbo](2026-11-16-130021-2c6c-soevereine-ai-voor-beoordeling-van-softskills-voortgangsgesp.md) | Onderzoek | ai-in-hoger-onderwijs, haalbaarheid, hbo, privacy, softskills, toetsing | Jens Varwijk |
 | 2026-11-16 | [Haalbaarheid en kosten van AI-beoordeling van mondelinge opnames](2026-11-16-130003-27a0-haalbaarheid-en-kosten-van-ai-beoordeling-van-mondelinge-opn.md) | Onderzoek | ai-in-hoger-onderwijs, bewijskwaliteit, haalbaarheid, privacy, toetsing | Pepijn |
 | 2026-11-16 | [Haalbaarheid landelijk AI-systeem voor studentbegeleiding hbo](2026-11-16-125650-cc0a-haalbaarheid-landelijk-ai-systeem-voor-studentbegeleiding-hb.md) | Onderzoek | ai-in-hoger-onderwijs, haalbaarheid, hbo, studiebegeleiding | Tein |
